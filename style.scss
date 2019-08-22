@@ -1,0 +1,64 @@
+/*!
+Theme Name: WebsiteSetup Business
+Theme URI: http://underscores.me/
+Author: Website Setup
+Author URI: https://websitesetup.org
+Description: Website Setup Business Theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: wsubusiness
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+WebsiteSetup Business is based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Site Featured Image
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Site branding
+	## Menus
+	## Hero
+# Accessibility
+# Alignments
+# Clearings
+# Layouts
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+# Footer
+--------------------------------------------------------------*/
+
+//* Site Variables */
+@import 'sass/variables';
+
+//* SASS Mixins */
+@import 'sass/mixins';
+
+//* Normalize */
+@import 'sass/normalize';
+
+//* Site Featured Image */
+@import 'sass/site-featured-image';
+
+//* Site Main Styles */
+@import 'sass/theme';

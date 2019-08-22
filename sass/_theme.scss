@@ -1,0 +1,898 @@
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+body {
+	color: #000;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 1rem;
+	line-height: 1.685;
+}
+input,
+optgroup,
+select,
+textarea {
+	font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+	line-height: 1.2;
+}
+
+p {
+	margin: 0 0 1.5em;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code, kbd, tt, var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark, ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+@include respond(tablet) {
+	body {
+		font-size: 18px;
+		font-size: 1.125rem;
+	}
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	/* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #fff;
+	/* Fallback for when there is no custom background color defined. */
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul, ol {
+	margin: 0 0 1.5em 0;
+	padding-left: 1.5em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto;
+	/* Make sure images are scaled correctly. */
+	max-width: 100%;
+	/* Adhere to container width. */
+}
+
+figure {
+	margin: 1em 0;
+	/* Extra wide images within figure tags don't overflow the content area. */
+}
+
+table {
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: none;
+	border-radius: 6px;
+	background: $color-primary;
+	color: #fff;
+	font-size: 1.125rem;
+	font-weight: 700;
+	letter-spacing: 0.025em;
+	line-height: 1;
+	padding: 0.8125rem 1rem;
+	transition: all 0.2s ease-out;
+	&:hover {
+		border-color: #ccc #bbb #aaa;
+	}
+	&:active,
+	&:focus {
+		border-color: #aaa #bbb #bbb;
+	}
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	background-color: $input-bg-color;
+	color: $input-color;
+	border: none;
+	border-radius: 6px;
+	padding: 0.6875rem 1rem;
+	height: 100%;
+	transition: all 0.2s ease-out;
+	&:focus {
+		background-color: $input-f-bg-color;
+		color: $input-f-color;
+	};
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+textarea {
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+.site-header {
+	padding: 4rem 0 0;
+}
+.site-header-inner {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+.site-header.featured-image {
+	padding: 4rem 0;
+}
+.home .site-header {
+	padding: 4rem 0;
+}
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+	color: $color-primary;
+	text-decoration: none;
+	transition: 0.2s all ease-out;
+	&:hover, &:focus, &:active {
+		color: midnightblue;
+		opacity: 0.6;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover, &:active {
+		outline: 0;
+	}
+}
+
+#main article .entry-content a {
+	box-shadow: 0 1px 0 0 currentColor;
+}
+/*--------------------------------------------------------------
+## Site branding
+--------------------------------------------------------------*/
+.site-branding {
+	margin: 0 auto 0 0;
+}
+.site-title {
+	margin: 0;
+	a {
+		color: #000;
+	}
+}
+h1.site-title,
+p.site-title {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+.site-description {
+	margin: 0;
+	font-size: 1.125rem;
+	color: #888;
+}
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	display: block;
+	.menu-primary-container {
+		padding: 0 2rem;
+		@include respond(tablet) {
+			padding: 0;
+		}
+	}
+	ul {
+		display: none;
+		list-style: none;
+		margin: 1rem 0 0;
+		font-weight: 700;
+		font-size: 1rem;
+		position: absolute;
+    top: 100%;
+    left: 2rem;
+    right: 2rem;
+    padding: 0.75rem 1.25rem;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 0.5rem;
+    z-index: 99;
+		@include respond(tablet) {
+			opacity: 1;
+			width: auto;
+			display: block;
+			position: static;
+			margin: 0;
+			padding: 0;
+			background: transparent;
+			box-shadow: none;
+			border-radius: 0;
+		}
+	}
+	ul ul {
+		box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+		float: left;
+		position: absolute;
+		top: 100%;
+		left: -999em;
+		z-index: 99999;
+	}
+	ul ul ul {
+		left: -999em;
+		top: 0;
+	}
+	ul ul li:hover > ul,
+	ul ul li.focus > ul {
+		left: 100%;
+	}
+	ul ul a {
+		width: 200px;
+	}
+	ul li:hover > ul,
+	ul li.focus > ul {
+		left: auto;
+	}
+	li {
+		position: relative;
+		margin: 0 0 0.5rem 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		@include respond(tablet) {
+			float: left;
+			margin: 0 1.5rem 0 0;
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+	a {
+		display: block;
+		text-decoration: none;
+		color: #000;
+	}
+	li.current-menu-item a {
+		opacity: 0.6;
+	}
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+.menu-toggle {
+	display: flex;
+	align-items: center;
+	padding: 0.5rem 0.25rem;
+	font-weight: 700;
+	span {
+		margin-left: 0.25rem;
+	}
+}
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@include respond(tablet) {
+	.menu-toggle {
+		display: none;
+	}
+}
+
+.site-main .comment-navigation, .site-main
+.posts-navigation, .site-main
+.post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+## Hero
+--------------------------------------------------------------*/
+.hero {
+	margin: 3rem 0 2rem;
+	@include respond(desktop) {
+		margin-top: 4rem 0 3rem;
+	}
+}
+.hero-inner {
+	position: relative;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+	/* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+/*--------------------------------------------------------------
+# Layouts
+--------------------------------------------------------------*/
+.container {
+	padding-left: 2rem;
+	padding-right: 2rem;
+	@include respond(desktop) {
+		max-width: 1200px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+@include respond(desktop) {
+	.content-area {
+		width: 70%;
+		float: left;
+		padding-right: 2rem;
+	}
+	.widget-area {
+		width: 30%;
+		float: left;
+		padding-left: 2rem;
+	}
+}
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	font-size: 0.875rem;
+	line-height: 1.4;
+	margin: 0 0 3.5rem;
+	/* Make sure select elements fit in widgets. */
+	select {
+		max-width: 100%;
+	}
+	.widget-title {
+		font-size: 0.8125rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+		margin: 0 0 1.5rem;
+	}
+
+	&:not(.widget_text) ul,
+	&:not(.widget_text) ol {
+		list-style: none;
+		padding-left: 0;
+		margin-left: 0;
+		li {
+			margin-bottom: 1rem;
+		}
+	}
+}
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.post,
+.page {
+	margin: 0 0 1.5em;
+}
+
+.updated:not(.published) {
+	display: none;
+}
+
+
+.entry-header {
+	position: relative;
+}
+.entry-title {
+	margin: 0 0 0.25rem;
+}
+.entry-title a {
+	color: #000;
+}
+.entry-meta {
+	display: flex;
+	align-items: center;
+	font-size: 0.75rem;
+	color: #888;
+	margin-bottom: 0.5rem;
+	.avatar {
+		border-radius: 50%;
+		margin-right: 0.5rem;
+	}
+	.byline {
+		margin-right: 1rem;
+	}
+	a {
+		color: #888;
+	}
+	.cat-links {
+		position: absolute;
+		top: 0.25rem;
+		left: 0.5rem;
+		a {
+			padding: .1rem .25rem;
+			border-radius: 2px;
+			background-color: rgba(0,0,0,0.6);
+			color: #fff;
+			font-size: 0.5625rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 0.11em;
+			&:hover,
+			&:focus,
+			&:active {
+				background-color: #000;
+				opacity: 1;
+			}
+		}
+	}
+}
+
+body:not(.home) {
+	.entry-meta {
+		.cat-links {
+			top: -1.5rem;
+			left: 2rem;
+		}
+	}
+	article .entry-meta {
+		.cat-links {
+			left: 0;
+		}
+	}
+}
+
+.home {
+	.page-content,
+	.entry-content,
+	.entry-summary {
+		margin: 1.5em 0 0;
+	}
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+.posts-navigation {
+	width: 100%;
+}
+
+.home {
+	.entry-title {
+		padding-top: 1.5rem;
+		font-size: 1.375rem;
+	}
+	.entry-header .post-thumbnail + .entry-title {
+		padding-top: 0;
+	}
+	.entry-meta .cat-links {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	.entry-header .post-thumbnail ~ .entry-meta .cat-links {
+		top: 0.25rem;
+		left: 0.5rem;
+	}
+	.entry-content {
+		margin-top: 0;
+		font-size: 0.875rem;
+		> p {
+			margin-top: 0;
+		}
+	}
+}
+@include respond(tablet) {
+	.home #main {
+	  display: flex;
+	  flex-wrap: wrap;
+	}
+	.home #main article {
+		width: 46%;
+		margin: 0 auto 2.5rem 0;
+	}
+	.home #main article:nth-child(even) {
+		margin-right: 0;
+	}
+}
+.nav-links {
+	a {
+		font-size: 1.125rem;
+		font-weight: 700;
+		line-height: 1.1;
+		color: #000;
+		display: flex;
+		align-items: center;
+		&::before,
+		&::after {
+			content: '';
+			font-family: 'dashicons';
+			display: inline-block;
+		  line-height: 1;
+		  font-weight: 400;
+		  font-style: normal;
+		  speak: none;
+		  text-decoration: inherit;
+		  text-transform: none;
+		  text-rendering: auto;
+		  -webkit-font-smoothing: antialiased;
+		  -moz-osx-font-smoothing: grayscale;
+		  width: 20px;
+		  height: 20px;
+		  font-size: 20px;
+		  vertical-align: top;
+		  text-align: center;
+		  transition: color .1s ease-in;
+		}
+	}
+	.nav-previous a {
+		&::before {
+			content: "\f340";
+			font-size: 48px;
+			width: 48px;
+			height: 48px;
+			opacity: 0.2;
+			margin-right: 1rem;
+		}
+	}
+	.nav-next a {
+		justify-content: flex-end;
+		&::after {
+			content: "\f344";
+			font-size: 48px;
+			width: 48px;
+			height: 48px;
+			opacity: 0.2;
+			margin-left: 1rem;
+		}
+	}
+}
+
+.wp-block-column {
+	margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	/* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+	display: inline-block;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.site-footer {
+	background-color: $footer-bg-color;
+	color: $footer-color;
+	font-size: 0.875rem;
+	line-height: 1.4;
+	text-align: center;
+	padding: 1rem 0;
+	@include respond(tablet) {
+		font-size: 1rem;
+		text-align: left;
+	}
+	a {
+		color: $footer-color;
+		&:hover, &:focus, &:active {
+			text-decoration: underline;
+		}
+	}
+}
