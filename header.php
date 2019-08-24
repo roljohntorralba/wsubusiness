@@ -18,15 +18,9 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
-
-	<?php if ( get_header_image() ) : ?>
-		<style type="text/css">
-			
-		</style>
-	<?php endif; ?>
 </head>
 
-<body <?php body_class('image-filters-enabled'); ?>>
+<body <?php get_header_image() ? body_class('image-filters-enabled') : body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wsubusiness' ); ?></a>
 

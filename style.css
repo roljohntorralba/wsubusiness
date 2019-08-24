@@ -386,14 +386,11 @@ template {
 }
 
 .site-header.featured-image {
+  padding: 4rem 0;
   /* Hide overflow for overflowing featured image */
   overflow: hidden;
   /* Need relative positioning to properly align layers. */
   position: relative;
-  /* Add text shadow to text, to increase readability. */
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-  /* Set white text color when featured image is set. */
-  /* add focus state to social media icons */
   /* Entry header */
   /* Custom Logo Link */
   /* Make sure important elements are above pseudo elements used for effects. */
@@ -411,79 +408,8 @@ template {
   /* Fifth layer: readability overlay */
 }
 
-.site-header.featured-image .site-branding .site-title,
-.site-header.featured-image .site-branding .site-description,
-.site-header.featured-image .main-navigation a:after,
-.site-header.featured-image .main-navigation .main-menu > li.menu-item-has-children:after,
-.site-header.featured-image .main-navigation li,
-.site-header.featured-image .social-navigation li,
-.site-header.featured-image .entry-meta,
-.site-header.featured-image .entry-title {
-  color: #fff;
-}
-
-.site-header.featured-image .main-navigation a,
-.site-header.featured-image .main-navigation a + svg,
-.site-header.featured-image .social-navigation a,
-.site-header.featured-image .site-title a,
-.site-header.featured-image .site-featured-image a {
-  color: #fff;
-  -webkit-transition: opacity 0.2s ease-in-out;
-  -o-transition: opacity 0.2s ease-in-out;
-  transition: opacity 0.2s ease-in-out;
-}
-
-.site-header.featured-image .main-navigation a:hover, .site-header.featured-image .main-navigation a:active,
-.site-header.featured-image .main-navigation a:hover + svg,
-.site-header.featured-image .main-navigation a:active + svg,
-.site-header.featured-image .main-navigation a + svg:hover,
-.site-header.featured-image .main-navigation a + svg:active,
-.site-header.featured-image .main-navigation a + svg:hover + svg,
-.site-header.featured-image .main-navigation a + svg:active + svg,
-.site-header.featured-image .social-navigation a:hover,
-.site-header.featured-image .social-navigation a:active,
-.site-header.featured-image .social-navigation a:hover + svg,
-.site-header.featured-image .social-navigation a:active + svg,
-.site-header.featured-image .site-title a:hover,
-.site-header.featured-image .site-title a:active,
-.site-header.featured-image .site-title a:hover + svg,
-.site-header.featured-image .site-title a:active + svg,
-.site-header.featured-image .site-featured-image a:hover,
-.site-header.featured-image .site-featured-image a:active,
-.site-header.featured-image .site-featured-image a:hover + svg,
-.site-header.featured-image .site-featured-image a:active + svg {
-  color: #fff;
-  opacity: 0.6;
-}
-
-.site-header.featured-image .main-navigation a:focus,
-.site-header.featured-image .main-navigation a:focus + svg,
-.site-header.featured-image .main-navigation a + svg:focus,
-.site-header.featured-image .main-navigation a + svg:focus + svg,
-.site-header.featured-image .social-navigation a:focus,
-.site-header.featured-image .social-navigation a:focus + svg,
-.site-header.featured-image .site-title a:focus,
-.site-header.featured-image .site-title a:focus + svg,
-.site-header.featured-image .site-featured-image a:focus,
-.site-header.featured-image .site-featured-image a:focus + svg {
-  color: #fff;
-}
-
 .site-header.featured-image .main-navigation .sub-menu a {
   opacity: inherit;
-}
-
-.site-header.featured-image .social-navigation a:focus {
-  color: #fff;
-  opacity: 1;
-  border-bottom: 1px solid #fff;
-}
-
-.site-header.featured-image .social-navigation svg,
-.site-header.featured-image .site-featured-image svg {
-  /* Use -webkit- only if supporting: Chrome < 54, iOS < 9.3, Android < 4.4.4 */
-  -webkit-filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
-  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35));
 }
 
 .site-header.featured-image .site-featured-image {
@@ -550,21 +476,16 @@ template {
 
 .site-header.featured-image .site-featured-image .entry-header .entry-meta a {
   color: currentColor;
+  opacity: 0.6;
 }
 
 .site-header.featured-image .site-featured-image .entry-header .entry-meta a:hover {
   text-decoration: none;
 }
 
-.site-header.featured-image .site-featured-image .entry-header .entry-meta .svg-icon {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 0.5em;
-}
-
-.site-header.featured-image .site-featured-image .entry-header .entry-meta .discussion-avatar-list {
-  display: none;
+.site-header.featured-image .site-featured-image .entry-header .entry-meta .cat-links a {
+  color: #fff;
+  opacity: 1;
 }
 
 @media only screen and (min-width: 768px) {
@@ -869,6 +790,8 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   border-color: #ccc #bbb #aaa;
+  cursor: pointer;
+  opacity: 0.6;
 }
 
 button:active, button:focus,
@@ -936,11 +859,16 @@ textarea {
   width: 100%;
 }
 
+p.form-submit {
+  margin-bottom: 0;
+}
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 .site-header {
   padding: 4rem 0 0;
+  margin-bottom: 4rem;
 }
 
 .site-header-inner {
@@ -953,14 +881,6 @@ textarea {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   position: relative;
-}
-
-.site-header.featured-image {
-  padding: 4rem 0;
-}
-
-.home .site-header {
-  padding: 4rem 0;
 }
 
 /*--------------------------------------------------------------
@@ -1017,6 +937,7 @@ p.site-title {
   margin: 0;
   font-size: 1.125rem;
   color: #888;
+  opacity: 0.6;
 }
 
 /*--------------------------------------------------------------
@@ -1537,9 +1458,6 @@ body:not(.home) article .entry-meta .cat-links {
   font-size: 20px;
   vertical-align: top;
   text-align: center;
-  -webkit-transition: color .1s ease-in;
-  -o-transition: color .1s ease-in;
-  transition: color .1s ease-in;
 }
 
 .nav-links .nav-previous a::before {
@@ -1702,6 +1620,7 @@ object {
   line-height: 1.4;
   text-align: center;
   padding: 1rem 0;
+  margin-top: 3rem;
 }
 
 @media only screen and (min-width: 768px) {

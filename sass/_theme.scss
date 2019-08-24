@@ -163,6 +163,8 @@ input[type="submit"] {
 	transition: all 0.2s ease-out;
 	&:hover {
 		border-color: #ccc #bbb #aaa;
+		cursor: pointer;
+		opacity: 0.6;
 	}
 	&:active,
 	&:focus {
@@ -207,23 +209,22 @@ textarea {
 	width: 100%;
 }
 
+p.form-submit {
+	margin-bottom: 0;
+}
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
 .site-header {
 	padding: 4rem 0 0;
+	margin-bottom: 4rem;
 }
 .site-header-inner {
   align-items: center;
   display: flex;
   flex-wrap: wrap;
   position: relative;
-}
-.site-header.featured-image {
-	padding: 4rem 0;
-}
-.home .site-header {
-	padding: 4rem 0;
 }
 /*--------------------------------------------------------------
 ## Links
@@ -268,6 +269,7 @@ p.site-title {
 	margin: 0;
 	font-size: 1.125rem;
 	color: #888;
+	opacity: 0.6;
 }
 /*--------------------------------------------------------------
 ## Menus
@@ -723,7 +725,6 @@ body:not(.home) {
 		  font-size: 20px;
 		  vertical-align: top;
 		  text-align: center;
-		  transition: color .1s ease-in;
 		}
 	}
 	.nav-previous a {
@@ -885,6 +886,7 @@ object {
 	line-height: 1.4;
 	text-align: center;
 	padding: 1rem 0;
+	margin-top: 3rem;
 	@include respond(tablet) {
 		font-size: 1rem;
 		text-align: left;

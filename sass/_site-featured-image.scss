@@ -1,6 +1,7 @@
 // Featured image styles
 
 .site-header.featured-image {
+	padding: 4rem 0;
 
 	/* Hide overflow for overflowing featured image */
 	overflow: hidden;
@@ -8,61 +9,8 @@
 	/* Need relative positioning to properly align layers. */
 	position: relative;
 
-	/* Add text shadow to text, to increase readability. */
-	text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
-
-	/* Set white text color when featured image is set. */
-	.site-branding .site-title,
-	.site-branding .site-description,
-	.main-navigation a:after,
-	.main-navigation .main-menu > li.menu-item-has-children:after,
-	.main-navigation li,
-	.social-navigation li,
-	.entry-meta,
-	.entry-title {
-		color: $color-bg;
-	}
-
-	.main-navigation a,
-	.main-navigation a + svg,
-	.social-navigation a,
-	.site-title a,
-	.site-featured-image a {
-		color: $color-bg;
-		transition: opacity 0.2s ease-in-out;
-
-		&:hover,
-		&:active,
-		&:hover + svg,
-		&:active + svg {
-			color: $color-bg;
-			opacity: 0.6;
-		}
-
-		&:focus,
-		&:focus + svg {
-			color: $color-bg;
-		}
-	}
-
 	.main-navigation .sub-menu a {
 		opacity: inherit;
-	}
-
-	/* add focus state to social media icons */
-	.social-navigation a {
-		&:focus {
-			color: $color-bg;
-			opacity: 1;
-			border-bottom: 1px solid $color-bg;
-		}
-	}
-
-	.social-navigation svg,
-	.site-featured-image svg {
-		/* Use -webkit- only if supporting: Chrome < 54, iOS < 9.3, Android < 4.4.4 */
-		-webkit-filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35) );
-				filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.35) );
 	}
 
 	/* Entry header */
@@ -126,21 +74,15 @@
 
 				a {
 					color: currentColor;
+					opacity: 0.6;
 
 					&:hover {
 						text-decoration: none;
 					}
 				}
-
-				.svg-icon {
-					position: relative;
-					display: inline-block;
-					vertical-align: middle;
-					margin-right: 0.5em;
-				}
-
-				.discussion-avatar-list {
-					display: none;
+				.cat-links a {
+					color: #fff;
+					opacity: 1;
 				}
 			}
 

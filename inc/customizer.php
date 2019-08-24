@@ -14,10 +14,6 @@ function wsubusiness_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-	$wp_customize->get_control( 'header_textcolor' )->section = 'header_image';
-	$wp_customize->get_control( 'header_textcolor' )->priority = 11;
-	$wp_customize->get_section( 'header_image' )->title = __( 'Header', 'wsubusiness' );
-	//$wp_customize->remove_control( 'header_textcolor' );
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial(
@@ -62,6 +58,30 @@ function wsubusiness_customize_register( $wp_customize ) {
 		)
 	);
 	*/
+
+	/*--------------------------------------------------------------
+	 * Header Image Section: Controls and Settings
+	 *-------------------------------------------------------------*/
+	// Add Header Color Filter setting and control.
+	$wp_customize->add_setting(
+		'header_filter_color',
+		array(
+			'default'           => '#003acf',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'header_filter_color',
+			array(
+				'label'				=> __( 'Header Filter Color', 'wsubusiness' ),
+				'section'     => 'colors',
+				'priority'		=> 5,
+			)
+		)
+	);
 
 	/*--------------------------------------------------------------
 	 * Global Colors: Controls and Settings
@@ -109,11 +129,15 @@ function wsubusiness_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Add Accent Color setting and control.
+	/*--------------------------------------------------------------
+	 * Footer Colors: Controls and Settings
+	 *-------------------------------------------------------------*/
+
+	// Add Footer Background Color setting and control.
 	$wp_customize->add_setting(
-		'accent_color',
+		'footer_bg_color',
 		array(
-			'default'           => '#d01212',
+			'default'           => '#222222',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
@@ -122,58 +146,120 @@ function wsubusiness_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'accent_color',
+			'footer_bg_color',
 			array(
-				'label'				=> __( 'Accent Color', 'wsubusiness' ),
+				'label'				=> __( 'Footer Background Color', 'wsubusiness' ),
 				'section'     => 'colors',
 			)
 		)
 	);
 
-	/*--------------------------------------------------------------
-	 * Header Image Section: Controls and Settings
-	 *-------------------------------------------------------------*/
-	// Add Header Link Color setting and control.
+	// Add Footer Text Color setting and control.
 	$wp_customize->add_setting(
-		'header_link_color',
+		'footer_text_color',
 		array(
-			'default'           => '#b0e2ff',
+			'default'           => '#c9c9c9',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
+
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'header_link_color',
+			'footer_text_color',
 			array(
-				'label'				=> __( 'Header Link Color', 'wsubusiness' ),
-				'section'     => 'header_image',
-				'priority'		=> 11,
+				'label'				=> __( 'Footer Text Color', 'wsubusiness' ),
+				'section'     => 'colors',
 			)
 		)
 	);
-	
-	// Add Header Color Filter setting and control.
+
+	// Add Footer Widget Background Color setting and control.
 	$wp_customize->add_setting(
-		'header_color_filter',
+		'footer_widget_background_color',
 		array(
-			'default'           => '#003acf',
+			'default'           => '#0d1834',
 			'transport'         => 'postMessage',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)
 	);
+
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'header_color_filter',
+			'footer_widget_background_color',
 			array(
-				'label'				=> __( 'Header Color Filter', 'wsubusiness' ),
-				'section'     => 'header_image',
-				'priority'		=> 11,
+				'label'				=> __( 'Footer Widget Background Color', 'wsubusiness' ),
+				'section'     => 'colors',
 			)
 		)
 	);
+
+	// Add Footer Widget Heading Color setting and control.
+	$wp_customize->add_setting(
+		'footer_widget_heading_color',
+		array(
+			'default'           => '#6e7a9b',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'footer_widget_heading_color',
+			array(
+				'label'				=> __( 'Footer Widget Heading Color', 'wsubusiness' ),
+				'section'     => 'colors',
+			)
+		)
+	);
+
+	// Add Footer Widget Heading Color setting and control.
+	$wp_customize->add_setting(
+		'footer_widget_text_color',
+		array(
+			'default'           => '#ffffff',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'footer_widget_text_color',
+			array(
+				'label'				=> __( 'Footer Widget Text Color', 'wsubusiness' ),
+				'section'     => 'colors',
+			)
+		)
+	);
+
+	// Add Footer Widget Link Color setting and control.
+	$wp_customize->add_setting(
+		'footer_widget_link_color',
+		array(
+			'default'           => '#8cacff',
+			'transport'         => 'postMessage',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'footer_widget_link_color',
+			array(
+				'label'				=> __( 'Footer Widget Link Color', 'wsubusiness' ),
+				'section'     => 'colors',
+			)
+		)
+	);
+
+
 
 	/*
 	// Add image filter setting and control.

@@ -178,12 +178,46 @@ function wsubusiness_colors_css_wrap() {
 	$primary_color = get_theme_mod( 'primary_color', '#003acf');
 	?>
 
-	<style type="text/css" id="custom-theme-colors" <?php echo is_customize_preview() ? 'data-primaryColor="' . $primary_color . '"' : ''; ?>>
+	<style type="text/css" id="custom-primary-css">
 		<?php echo wsubusiness_custom_colors_css(); ?>
 	</style>
 	<?php
 }
 add_action( 'wp_head', 'wsubusiness_colors_css_wrap' );
+
+/**
+ * Display custom text color CSS in customizer and on frontend.
+ */
+function wsubusiness_text_colors_css_wrap() {
+
+	$text_color = get_theme_mod( 'text_color', '#000000' );
+	$footer_bg = get_theme_mod( 'footer_bg_color', '#222222' );
+	$footer_text = get_theme_mod( 'footer_text_color', '#c9c9c9' );
+
+	$is_customized = '#000000' === $text_color && '#222222' === $footer_bg;
+	// Only include custom colors in customizer or frontend.
+	if ( ( ! is_customize_preview() && ( $is_customized ) ) || is_admin() ) {
+		return;
+	}
+	?>
+
+	<style type="text/css" id="custom-colors-css">
+		/* text_color */
+		body, .nav-links a {
+			color: <?php echo esc_attr( $text_color ); ?>;
+		}
+		/* footer custom colors */
+		.site-footer {
+			background-color: <?php echo esc_attr( $footer_bg ); ?>;
+			color: <?php echo esc_attr( $footer_text ); ?>;
+		}
+		.site-footer a {
+			color: <?php echo esc_attr( $footer_text ); ?>;
+		}
+	</style>
+	<?php
+}
+add_action( 'wp_head', 'wsubusiness_text_colors_css_wrap' );
 
 /**
  * Implement the Custom Header feature.
