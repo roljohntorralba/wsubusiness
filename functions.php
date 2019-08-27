@@ -7,6 +7,11 @@
  * @package WebsiteSetup_Business
  */
 
+/**
+ * Load Kirki
+ */
+require_once get_template_directory() . '/kirki-develop/kirki.php';
+
 if ( ! function_exists( 'wsubusiness_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -57,6 +62,7 @@ if ( ! function_exists( 'wsubusiness_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'wsubusiness' ),
+			'footer-menu-1' => esc_html__( 'Footer Menu', 'wsubusiness' ),
 		) );
 
 		/*
@@ -126,6 +132,15 @@ function wsubusiness_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer', 'wsubusiness' ),
+		'id'            => 'footer-1',
+		'description'   => esc_html__( 'Add widgets here.', 'wsubusiness' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 }
 add_action( 'widgets_init', 'wsubusiness_widgets_init' );
 
@@ -184,40 +199,6 @@ function wsubusiness_colors_css_wrap() {
 	<?php
 }
 add_action( 'wp_head', 'wsubusiness_colors_css_wrap' );
-
-/**
- * Display custom text color CSS in customizer and on frontend.
- */
-function wsubusiness_text_colors_css_wrap() {
-
-	$text_color = get_theme_mod( 'text_color', '#000000' );
-	$footer_bg = get_theme_mod( 'footer_bg_color', '#222222' );
-	$footer_text = get_theme_mod( 'footer_text_color', '#c9c9c9' );
-
-	$is_customized = '#000000' === $text_color && '#222222' === $footer_bg;
-	// Only include custom colors in customizer or frontend.
-	if ( ( ! is_customize_preview() && ( $is_customized ) ) || is_admin() ) {
-		return;
-	}
-	?>
-
-	<style type="text/css" id="custom-colors-css">
-		/* text_color */
-		body, .nav-links a {
-			color: <?php echo esc_attr( $text_color ); ?>;
-		}
-		/* footer custom colors */
-		.site-footer {
-			background-color: <?php echo esc_attr( $footer_bg ); ?>;
-			color: <?php echo esc_attr( $footer_text ); ?>;
-		}
-		.site-footer a {
-			color: <?php echo esc_attr( $footer_text ); ?>;
-		}
-	</style>
-	<?php
-}
-add_action( 'wp_head', 'wsubusiness_text_colors_css_wrap' );
 
 /**
  * Implement the Custom Header feature.

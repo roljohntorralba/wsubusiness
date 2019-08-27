@@ -13,23 +13,50 @@
 		</div><!-- .site-content-inner -->
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer">
+	<footer class="site-footer">
+
+		<?php if( is_active_sidebar( 'footer-1' ) ) : ?>
+			<div class="footer-widgets">
+				<div class="footer-widgets-inner container">
+					<?php dynamic_sidebar( 'footer-1' ); ?>
+				</div>
+			</div>
+		<?php endif; ?>
+
 		<div class="site-footer-inner container">
-			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wsubusiness' ) ); ?>">
-					<?php
-					/* translators: %s: CMS name, i.e. WordPress. */
-					printf( esc_html__( 'Proudly powered by %s', 'wsubusiness' ), 'WordPress' );
-					?>
-				</a>
-				<span class="sep"> | </span>
-					<?php
-					/* translators: 1: Theme name, 2: Theme author. */
-					printf( esc_html__( 'Theme: %1$s by %2$s.', 'wsubusiness' ), 'wsubusiness', '<a href="https://websitesetup.org">Website Setup</a>' );
-					?>
+			<div id="colophon" class="site-info">
+				<?php if( get_theme_mod( 'footer_copyright_text' ) ) : ?>
+					<?php printf( '%1$s', get_theme_mod('footer_copyright_text') ); ?>
+				<?php else: ?>
+					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wsubusiness' ) ); ?>">
+						<?php
+						/* translators: %s: CMS name, i.e. WordPress. */
+						printf( esc_html__( 'Proudly powered by %s', 'wsubusiness' ), 'WordPress' );
+						?>
+					</a>
+					<span class="sep"> | </span>
+						<?php
+						/* translators: 1: Theme name, 2: Theme author. */
+						printf( esc_html__( 'Theme: %1$s by %2$s.', 'wsubusiness' ), 'wsubusiness', '<a href="https://websitesetup.org">Website Setup</a>' );
+						?>
+				<?php endif; ?>
 			</div><!-- .site-info -->
-	</div><!-- .site-footer-inner -->
+			<?php if( false != get_theme_mod( 'footer_menu_switch', false ) ) : ?>
+				<div id="footer-menu-1" class="footer-menu">
+					<?php
+					wp_nav_menu( array(
+						'theme_location' => 'footer-menu-1',
+						'menu_id'        => 'footer-menu',
+					) );
+					?>
+				</div>
+			<?php endif; ?>
+		</div><!-- .site-footer-inner -->
 	</footer><!-- #colophon -->
+
+	<?php if( true == get_theme_mod( 'footer_backtotop', true ) ) : ?>
+		<a href="#" class="back-to-top"></a>
+	<?php endif; ?>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

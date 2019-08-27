@@ -47,9 +47,11 @@
 
 			<nav id="site-navigation" class="main-navigation">  
 				<button class="menu-toggle hamburger hamburger--spin" aria-controls="primary-menu" aria-expanded="false">
-					<?php esc_html_e( 'Menu', 'wsubusiness' ); ?>
 					<span class="hamburger-box">
 				    <span class="hamburger-inner"></span>
+				  </span>
+				  <span class="screen-reader-text">
+				  	<?php esc_html_e( 'Menu', 'wsubusiness' ); ?>
 				  </span>
 				</button>
 				<?php

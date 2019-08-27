@@ -43,3 +43,6 @@ function wsubusiness_excerpt_readmore($more) {
     return '... <a href="'. get_permalink($post->ID) . '" class="readmore">' . 'Read more' . '</a>';
 }
 add_filter('excerpt_more', 'wsubusiness_excerpt_readmore');
+
+// Disables Kirki Telemetry Module (stop sending notice)
+add_filter( 'kirki_telemetry', '__return_false' );

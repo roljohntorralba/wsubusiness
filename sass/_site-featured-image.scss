@@ -3,11 +3,13 @@
 .site-header.featured-image {
 	padding: 4rem 0;
 
-	/* Hide overflow for overflowing featured image */
-	overflow: hidden;
-
 	/* Need relative positioning to properly align layers. */
 	position: relative;
+
+	@include respond(tablet) {
+		/* Hide overflow for overflowing featured image */
+		overflow-x: hidden;
+	}
 
 	.main-navigation .sub-menu a {
 		opacity: inherit;
@@ -129,8 +131,11 @@
 	}
 
 	/* Make sure important elements are above pseudo elements used for effects. */
-	.site-branding, .hero, .main-navigation {
+	.site-branding, .hero, {
 		position: relative;
+		z-index: 10;
+	}
+	.main-navigation {
 		z-index: 10;
 	}
 
