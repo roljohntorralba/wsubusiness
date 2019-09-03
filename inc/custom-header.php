@@ -49,44 +49,16 @@ if ( ! function_exists( 'wsubusiness_header_style' ) ) :
 		if( get_theme_support( 'custom-header', 'default-text-color' ) !== $header_text_color ) :
 			?>
 			<style type="text/css" id="custom-header-text-css">
-			<?php
-			// Has the text been hidden?
-			if ( ! display_header_text() ) :
-				?>
+			<?php if ( ! display_header_text() ) : ?>
 				.site-title,
 				.site-description {
 					position: absolute;
 					clip: rect(1px, 1px, 1px, 1px);
 				}
-			<?php
-			// If the user has set a custom color for the text use that.
-			else :
-				?>
+			<?php else : ?>
 				.site-title a,
-				.site-description,
-				.main-navigation a:after,
-				.main-navigation .main-menu > li.menu-item-has-children:after,
-				.main-navigation li,
-				.site-header .entry-meta,
-				.site-header .entry-title,
-				.main-navigation a,
-				.site-featured-image a,
-				.main-navigation a:hover,
-				.site-featured-image a:hover,
-				.main-navigation a:active,
-				.site-featured-image a:active,
-				.main-navigation a:focus,
-				.site-featured-image a:focus,
-				.menu-toggle {
+				.site-description {
 					color: #<?php echo esc_attr( $header_text_color ); ?>;
-				}
-				.hamburger-inner,
-				.hamburger-inner:after,
-				.hamburger-inner:before,
-				.hamburger.is-active .hamburger-inner,
-				.hamburger.is-active .hamburger-inner:after,
-				.hamburger.is-active .hamburger-inner:before {
-					background-color: #<?php echo esc_attr( $header_text_color ); ?>;
 				}
 			<?php endif; ?>
 			</style>

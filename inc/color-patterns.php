@@ -25,6 +25,7 @@ function wsubusiness_custom_colors_css() {
 		 * - buttons
 		 * - WP Block Button
 		 * - Blocks
+		 * - Table header
 		 */
 		.main-navigation .sub-menu,
 		.sticky-post,
@@ -37,6 +38,17 @@ function wsubusiness_custom_colors_css() {
 		.entry-content > *[class^="wp-block-"].is-style-solid-color.has-primary-background-color,
 		.entry-content .wp-block-file .wp-block-file__button {
 			background-color: ' . $primary_color . ';
+		}
+		.entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
+			background-color: transparent;
+			color: ' . $primary_color . ';
+		}
+		.wp-block-table th,
+		table th,
+		table thead th,
+		th {
+			background-color: ' . $primary_color . ';
+			border-color: ' . $primary_color . ';
 		}
 
 		/*
@@ -63,7 +75,7 @@ function wsubusiness_custom_colors_css() {
 		.comment .comment-metadata > a:hover,
 		.comment .comment-metadata .comment-edit-link:hover,
 		#colophon .site-info a:hover,
-		.widget a,
+		.widget a:not(.button),
 		.entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color),
 		.entry-content > .has-primary-color,
 		.entry-content > *[class^="wp-block-"] .has-primary-color,
@@ -75,6 +87,7 @@ function wsubusiness_custom_colors_css() {
 		/*
 		 * Set border color for:
 		 * wp block quote
+		 * wp block button outline
 		 * :focus
 		 */
 		blockquote,
@@ -96,7 +109,8 @@ function wsubusiness_custom_colors_css() {
 		input[type="datetime"]:focus,
 		input[type="datetime-local"]:focus,
 		input[type="color"]:focus,
-		textarea:focus {
+		textarea:focus,
+		.entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
 			border-color: ' . $primary_color . ';
 		}
 
@@ -120,7 +134,7 @@ function wsubusiness_custom_colors_css() {
 		.comment-navigation .nav-previous a:hover,
 		.comment-navigation .nav-next a:hover,
 		#cancel-comment-reply-link:hover,
-		.widget a:hover {
+		.widget a:hover:not(.button) {
 			color: ' . $primary_color . ';
 		}
 
@@ -141,11 +155,17 @@ function wsubusiness_custom_colors_css() {
 
 		/* Text selection colors */
 		::selection {
-			background-color: ' . $primary_color . ';
+			background-color: ' . wsubusiness_adjust_brightness( $primary_color, 90 ) . ';
 		}
 		::-moz-selection {
-			background-color: ' . $primary_color . ';
-		}';
+			background-color: ' . wsubusiness_adjust_brightness( $primary_color, 90 ) . ';
+		}
+
+		.bypostauthor .comment-content {
+			background-color: ' . wsubusiness_adjust_brightness( $primary_color, 50 )  . ';
+		}
+
+		';
 
 	$editor_css = '
 		/*

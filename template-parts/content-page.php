@@ -11,7 +11,10 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php wsubusiness_post_thumbnail(); ?>
+	<?php
+		if( ! get_header_image() )
+			wsubusiness_post_thumbnail();
+	?>
 
 	<?php if( !get_header_image() ) : ?>
 	<div class="entry-header">

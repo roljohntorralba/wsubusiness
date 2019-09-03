@@ -7,15 +7,15 @@
  */
 
 (function() {
-/*
+
 	wp.customize.bind( 'ready', function() {
 
-		// Only show the color hue control when there's a custom primary color.
+		// Only show the logo size when a custom logo is uploaded
 		
-		wp.customize( 'primary_color', function( setting ) {
-			wp.customize.control( 'primary_color_hue', function( control ) {
+		wp.customize( 'custom_logo', function( setting ) {
+			wp.customize.control( 'custom_logo_size', function( control ) {
 				var visibility = function() {
-					if ( 'custom' === setting.get() ) {
+					if ( setting.get() ) {
 						control.container.slideDown( 180 );
 					} else {
 						control.container.slideUp( 180 );
@@ -27,6 +27,6 @@
 			});
 		});
 	});
-	*/
+	
 
 })( jQuery );

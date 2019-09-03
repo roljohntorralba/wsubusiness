@@ -18,6 +18,18 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+	<?php
+	if( get_header_image() ) :
+		$background_image = has_post_thumbnail() ? get_the_post_thumbnail_url() : get_header_image();
+	?>
+		<style type="text/css" id="header-image-background">
+			.site-header.featured-image {
+				background: <?php echo get_theme_mod( 'header_filter_color', '#003acf' ); echo ' url(' . $background_image . ') '; ?> no-repeat center;
+				background-size: -webkit-cover;
+				background-size: cover;
+			}
+		</style>
+	<?php endif; ?>
 </head>
 
 <body <?php get_header_image() ? body_class('image-filters-enabled') : body_class(); ?>>
@@ -64,14 +76,14 @@
 		</div><!-- .site-header-inner -->
 
 		<?php if( get_header_image() ) : ?>
-			<div class="site-featured-image">
+			<div class="site-featured-image container">
 
-				<div class="post-thumbnail">
+				<!-- <div class="post-thumbnail">
 					<img src="<?php echo get_header_image(); ?>" alt="">
-				</div>
+				</div> -->
 				
 				<?php if( is_singular() ) : ?>
-					<div class="entry-header container">
+					<div class="entry-header">
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 						<?php if ( 'post' === get_post_type() ) : ?>
 							<div class="entry-meta">
@@ -89,5 +101,7 @@
 		
 	</header><!-- #masthead -->
 
+	<?php get_sidebar('ctatop'); ?>
+
 	<div id="content" class="site-content">
-		<div class="site-content-inner container clearfix">
+		<div class="site-content-inner container clear <?php $sidebar_position = 'right' == get_theme_mod('layout_sidebar_position', 'right') ? 'sidebar-right' : 'sidebar-left'; echo $sidebar_position; ?>">

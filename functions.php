@@ -10,7 +10,7 @@
 /**
  * Load Kirki
  */
-require_once get_template_directory() . '/kirki-develop/kirki.php';
+require get_template_directory() . '/kirki/kirki.php';
 
 if ( ! function_exists( 'wsubusiness_setup' ) ) :
 	/**
@@ -124,6 +124,15 @@ add_action( 'after_setup_theme', 'wsubusiness_content_width', 0 );
  */
 function wsubusiness_widgets_init() {
 	register_sidebar( array(
+		'name'          => esc_html__( 'CTA Top', 'wsubusiness' ),
+		'id'            => 'cta-top-1',
+		'description'   => esc_html__( 'Widgets will appear below the header.', 'wsubusiness' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
 		'name'          => esc_html__( 'Sidebar', 'wsubusiness' ),
 		'id'            => 'sidebar-1',
 		'description'   => esc_html__( 'Add widgets here.', 'wsubusiness' ),
@@ -133,9 +142,27 @@ function wsubusiness_widgets_init() {
 		'after_title'   => '</h2>',
 	) );
 	register_sidebar( array(
+		'name'          => esc_html__( 'After Content', 'wsubusiness' ),
+		'id'            => 'after-content-1',
+		'description'   => esc_html__( 'Widgets will appear below the page and post\'s content', 'wsubusiness' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+		'name'          => esc_html__( 'CTA Bottom', 'wsubusiness' ),
+		'id'            => 'cta-bot-1',
+		'description'   => esc_html__( 'Widgets will appear above the footer', 'wsubusiness' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
 		'name'          => esc_html__( 'Footer', 'wsubusiness' ),
 		'id'            => 'footer-1',
-		'description'   => esc_html__( 'Add widgets here.', 'wsubusiness' ),
+		'description'   => esc_html__( 'Footer widgets.', 'wsubusiness' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
@@ -159,11 +186,22 @@ function wsubusiness_scripts() {
 
 	wp_enqueue_script( 'wsubusiness-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
+	wp_enqueue_script( 'wsubusiness-scripts-js', get_template_directory_uri() . '/js/scripts.min.js', array(), '20190830', true);
+
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'wsubusiness_scripts' );
+
+/**
+ * Enqueue the customizer stylesheet.
+ */
+function wsubusiness_enqueue_customizer_stylesheet() {
+	wp_enqueue_style( 'wsubusiness-customizer-css', get_template_directory_uri() . '/css/customizer.css', NULL, NULL, 'all' );
+}
+add_action( 'customize_controls_print_styles', 'wsubusiness_enqueue_customizer_stylesheet' );
+
 
 /**
  * Enqueue supplemental block editor styles.
@@ -199,6 +237,28 @@ function wsubusiness_colors_css_wrap() {
 	<?php
 }
 add_action( 'wp_head', 'wsubusiness_colors_css_wrap' );
+
+/**
+ * Display custom logo sizing CSS.
+ */
+function wsubusiness_custom_layout_css() {
+
+	$logo_size = get_theme_mod( 'custom_logo_size', 200);
+	$container_size = get_theme_mod( 'custom_container_size', 1200);
+	?>
+
+	<style type="text/css" id="custom-logo-size">
+		.custom-logo {
+			max-width: <?php echo $logo_size; ?>px;
+		}
+		.container,
+		.wp-block-cover__inner-container {
+			max-width: <?php echo $container_size; ?>px;
+		}
+	</style>
+	<?php
+}
+add_action( 'wp_head', 'wsubusiness_custom_layout_css' );
 
 /**
  * Implement the Custom Header feature.
