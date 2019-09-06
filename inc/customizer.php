@@ -126,6 +126,17 @@ function wsubusiness_widget_footer_active() {
 	}
 }
 
+/**
+ * Is active callback function for all extra Widgets
+ */
+function wsubusiness_widgets_active() {
+	if( is_active_sidebar( 'cta-top-1' ) && is_active_sidebar( 'after-content-1' ) && is_active_sidebar( 'cta-bot-1' ) && is_active_sidebar( 'footer-1' ) ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
 // Kirki configuration to make the theme unique
 Kirki::add_config( 'wsubusiness_kirki', array(
 	'capability'    => 'edit_theme_options',
@@ -345,7 +356,8 @@ Kirki::add_field( 'theme_config_id', array(
 	'settings'    => 'divider_color_widget',
 	'label'       => '',
 	'section'     => 'colors',
-	'default'     => '<hr><div style="padding: 0.5rem;background-color: #333; color: #fff;">' . esc_html__( 'Widget controls (widgets must not be empty)', 'wsubusiness' ) . '</div>',
+	'default'     => '<hr><div style="padding: 0.5rem;background-color: #333; color: #fff;">' . esc_html__( 'Widget controls', 'wsubusiness' ) . '</div>',
+	'active_callback' => 'wsubusiness_widgets_active',
 ) );
 
 // CTA Top Widget Background Color
@@ -458,13 +470,8 @@ Kirki::add_field( 'wsubusiness_kirki', array(
 	'active_callback' => 'wsubusiness_widget_cta_bottom_active',
 ) );
 
-// Informative control----------------------------------------
-Kirki::add_field( 'theme_config_id', array(
-	'type'        => 'custom',
-	'settings'    => 'divider_color_footer',
-	'label'       => '',
-	'section'     => 'colors',
-	'default'     => '<hr><div style="padding: 0.5rem;background-color: #333; color: #fff;">' . esc_html__( 'Footer controls', 'wsubusiness' ) . '</div>',
+// Informative control short -----------
+Kirki::add_field( 'theme_config_id', array( 'type' => 'custom', 'settings' => 'divider_short_footercolors', 'label' => '', 'section' => 'colors', 'default' => '<hr>', 'active_callback' => 'wsubusiness_widget_cta_bottom_active',
 ) );
 
 // Footer Widget Background Color
@@ -535,8 +542,13 @@ Kirki::add_field( 'wsubusiness_kirki', array(
 	'active_callback' => 'wsubusiness_widget_footer_active',
 ) );
 
-// Informative control short -----------
-Kirki::add_field( 'theme_config_id', array( 'type' => 'custom', 'settings' => 'divider_short_footercolors', 'label' => '', 'section' => 'colors', 'default' => '<hr>', 'active_callback' => 'wsubusiness_widget_footer_active',
+// Informative control----------------------------------------
+Kirki::add_field( 'theme_config_id', array(
+	'type'        => 'custom',
+	'settings'    => 'divider_color_footer',
+	'label'       => '',
+	'section'     => 'colors',
+	'default'     => '<hr><div style="padding: 0.5rem;background-color: #333; color: #fff;">' . esc_html__( 'Footer controls', 'wsubusiness' ) . '</div>',
 ) );
 
 // Footer Background Color
