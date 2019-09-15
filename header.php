@@ -19,7 +19,7 @@
 
 	<?php wp_head(); ?>
 	<?php
-	if( get_header_image() ) :
+	if( get_header_image() && !is_woocommerce() ) :
 		$background_image = has_post_thumbnail() ? get_the_post_thumbnail_url() : get_header_image();
 	?>
 		<style type="text/css" id="header-image-background">
@@ -76,13 +76,8 @@
 		</div><!-- .site-header-inner -->
 
 		<?php if( get_header_image() ) : ?>
-			<div class="site-featured-image container">
-
-				<!-- <div class="post-thumbnail">
-					<img src="<?php echo get_header_image(); ?>" alt="">
-				</div> -->
-				
-				<?php if( is_singular() ) : ?>
+			<div class="site-featured-image container">				
+				<?php if( is_singular() && !is_woocommerce() ) : ?>
 					<div class="entry-header">
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 						<?php if ( 'post' === get_post_type() ) : ?>

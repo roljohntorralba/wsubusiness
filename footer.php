@@ -51,7 +51,7 @@
 	</footer><!-- #colophon -->
 
 	<?php if( true == get_theme_mod( 'footer_backtotop', true ) ) : ?>
-		<a href="#" id="footer-back-to-top" class="back-to-top"><span class="screen-reader-text">Back to top</span></a>
+		<a href="#" id="footer-back-to-top" class="back-to-top" title="Back to top"><span class="screen-reader-text">Back to top</span>&#9708;</a>
 	<?php endif; ?>
 </div><!-- #page -->
 

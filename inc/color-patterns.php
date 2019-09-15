@@ -18,15 +18,6 @@ function wsubusiness_custom_colors_css() {
 	}
 
 	$theme_css = '
-		/*
-		 * Set background for:
-		 * - Submenu
-		 * - Sticky Post
-		 * - buttons
-		 * - WP Block Button
-		 * - Blocks
-		 * - Table header
-		 */
 		.main-navigation .sub-menu,
 		.sticky-post,
 		.entry-content .wp-block-button .wp-block-button__link:not(.has-background),
@@ -36,34 +27,24 @@ function wsubusiness_custom_colors_css() {
 		.entry-content > *[class^="wp-block-"] .has-primary-background-color,
 		.entry-content > *[class^="wp-block-"].is-style-solid-color,
 		.entry-content > *[class^="wp-block-"].is-style-solid-color.has-primary-background-color,
-		.entry-content .wp-block-file .wp-block-file__button {
+		.entry-content .wp-block-file .wp-block-file__button,
+		.main-navigation .sub-menu > li > a:hover,
+		.main-navigation .sub-menu > li > a:focus,
+		.main-navigation .sub-menu > li > a:hover:after,
+		.main-navigation .sub-menu > li > a:focus:after,
+		.main-navigation .sub-menu > li > .menu-item-link-return:hover,
+		.main-navigation .sub-menu > li > .menu-item-link-return:focus,
+		.main-navigation .sub-menu > li > a:not(.submenu-expand):hover,
+		.main-navigation .sub-menu > li > a:not(.submenu-expand):focus,
+		.entry-content > .has-secondary-background-color,
+		.entry-content > *[class^="wp-block-"].has-secondary-background-color,
+		.entry-content > *[class^="wp-block-"] .has-secondary-background-color,
+		.entry-content > *[class^="wp-block-"].is-style-solid-color.has-secondary-background-color,
+		ul.page-numbers li .page-numbers.current, ol.page-numbers li .page-numbers.current,
+		.widget_price_filter .ui-slider .ui-slider-handle {
 			background-color: ' . $primary_color . ';
-		}
-		.entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
-			background-color: transparent;
-			color: ' . $primary_color . ';
-		}
-		.wp-block-table th,
-		table th,
-		table thead th,
-		th {
-			background-color: ' . $primary_color . ';
-			border-color: ' . $primary_color . ';
 		}
 
-		/*
-		 * Set Color for:
-		 * - all links
-		 * - main navigation links
-		 * - Post navigation links
-		 * - Post entry meta hover
-		 * - Post entry header more-link hover
-		 * - main navigation svg
-		 * - comment navigation
-		 * - Comment edit link hover
-		 * - Site Footer Link hover
-		 * - Widget links
-		 */
 		a,
 		.main-navigation .main-menu > li,
 		.main-navigation ul.main-menu > li > a,
@@ -80,16 +61,28 @@ function wsubusiness_custom_colors_css() {
 		.entry-content > .has-primary-color,
 		.entry-content > *[class^="wp-block-"] .has-primary-color,
 		.entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color,
-		.entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color p {
+		.entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-primary-color p,
+		a:hover, a:active,
+		.main-navigation .main-menu > li > a:hover,
+		.main-navigation .main-menu > li > a:hover + svg,
+		.post-navigation .nav-links a:hover,
+		.post-navigation .nav-links a:hover .post-title,
+		.author-bio .author-description .author-link:hover,
+		.entry-content > .has-secondary-color,
+		.entry-content > *[class^="wp-block-"] .has-secondary-color,
+		.entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color,
+		.entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color p,
+		.comment .comment-author .fn a:hover,
+		.comment-reply-link:hover,
+		.comment-navigation .nav-previous a:hover,
+		.comment-navigation .nav-next a:hover,
+		#cancel-comment-reply-link:hover,
+		.widget a:hover:not(.button),
+		ul.page-numbers li .page-numbers, ol.page-numbers li .page-numbers,
+		.entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
 			color: ' . $primary_color . ';
 		}
 
-		/*
-		 * Set border color for:
-		 * wp block quote
-		 * wp block button outline
-		 * :focus
-		 */
 		blockquote,
 		.entry-content blockquote,
 		.entry-content .wp-block-quote:not(.is-large),
@@ -113,44 +106,9 @@ function wsubusiness_custom_colors_css() {
 		.entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
 			border-color: ' . $primary_color . ';
 		}
-
+		
 		.gallery-item > div > a:focus {
 			box-shadow: 0 0 0 2px ' . $primary_color . ';
-		}
-
-		/* Hover colors */
-		a:hover, a:active,
-		.main-navigation .main-menu > li > a:hover,
-		.main-navigation .main-menu > li > a:hover + svg,
-		.post-navigation .nav-links a:hover,
-		.post-navigation .nav-links a:hover .post-title,
-		.author-bio .author-description .author-link:hover,
-		.entry-content > .has-secondary-color,
-		.entry-content > *[class^="wp-block-"] .has-secondary-color,
-		.entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color,
-		.entry-content > *[class^="wp-block-"].is-style-solid-color blockquote.has-secondary-color p,
-		.comment .comment-author .fn a:hover,
-		.comment-reply-link:hover,
-		.comment-navigation .nav-previous a:hover,
-		.comment-navigation .nav-next a:hover,
-		#cancel-comment-reply-link:hover,
-		.widget a:hover:not(.button) {
-			color: ' . $primary_color . ';
-		}
-
-		.main-navigation .sub-menu > li > a:hover,
-		.main-navigation .sub-menu > li > a:focus,
-		.main-navigation .sub-menu > li > a:hover:after,
-		.main-navigation .sub-menu > li > a:focus:after,
-		.main-navigation .sub-menu > li > .menu-item-link-return:hover,
-		.main-navigation .sub-menu > li > .menu-item-link-return:focus,
-		.main-navigation .sub-menu > li > a:not(.submenu-expand):hover,
-		.main-navigation .sub-menu > li > a:not(.submenu-expand):focus,
-		.entry-content > .has-secondary-background-color,
-		.entry-content > *[class^="wp-block-"].has-secondary-background-color,
-		.entry-content > *[class^="wp-block-"] .has-secondary-background-color,
-		.entry-content > *[class^="wp-block-"].is-style-solid-color.has-secondary-background-color {
-			background-color: ' . $primary_color . ';
 		}
 
 		/* Text selection colors */
@@ -163,6 +121,16 @@ function wsubusiness_custom_colors_css() {
 
 		.bypostauthor .comment-content {
 			background-color: ' . wsubusiness_adjust_brightness( $primary_color, 50 )  . ';
+		}
+
+		ul.page-numbers li .page-numbers, ol.page-numbers li .page-numbers {
+			border-color: ' . wsubusiness_adjust_brightness( $primary_color, 50 ) . ';
+		}
+		ul.page-numbers li:last-child .page-numbers, ol.page-numbers li:last-child .page-numbers {
+			border-color: ' . wsubusiness_adjust_brightness( $primary_color, 50 ) . ';	
+		}
+		.widget_price_filter .ui-slider .ui-slider-range {
+			background-color: ' . wsubusiness_adjust_brightness( $primary_color, 30 ) . ';	
 		}
 
 		';

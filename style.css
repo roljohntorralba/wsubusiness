@@ -386,7 +386,7 @@ template {
 }
 
 .site-header.featured-image {
-  padding: 4rem 0;
+  padding: 2rem 0;
   /* Need relative positioning to properly align layers. */
   position: relative;
   /* Entry header */
@@ -409,6 +409,7 @@ template {
   .site-header.featured-image {
     /* Hide overflow for overflowing featured image */
     overflow: hidden;
+    padding: 4rem 0;
   }
 }
 
@@ -456,9 +457,15 @@ template {
 }
 
 .site-header.featured-image .site-featured-image .entry-header {
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-bottom: 0;
   /* Entry meta */
+}
+
+@media only screen and (min-width: 768px) {
+  .site-header.featured-image .site-featured-image .entry-header {
+    margin-top: 4rem;
+  }
 }
 
 .site-header.featured-image .site-featured-image .entry-header .entry-title:before {
@@ -816,10 +823,24 @@ figure {
   /* Extra wide images within figure tags don't overflow the content area. */
 }
 
+.wp-block-table,
 table {
   margin: 0 0 1.5em;
   width: 100%;
   font-size: 1rem;
+}
+
+.wp-block-table thead th, .wp-block-table th,
+table thead th,
+table th {
+  background-color: rgba(0, 0, 0, 0.125);
+}
+
+.wp-block-table th, .wp-block-table td,
+table th,
+table td {
+  padding: 0.25rem 1rem;
+  border: none;
 }
 
 /*--------------------------------------------------------------
@@ -888,6 +909,10 @@ input[type="submit"] .secondary,
   background-color: #003acf;
 }
 
+.entry-content .wp-block-button.is-style-outline .wp-block-button__link:not(.has-text-color) {
+  background-color: transparent;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -943,6 +968,11 @@ select {
 
 textarea {
   width: 100%;
+}
+
+label {
+  font-weight: 700;
+  font-size: 0.875rem;
 }
 
 p.form-submit {
@@ -1242,6 +1272,45 @@ p.site-title {
   width: 50%;
 }
 
+ul.page-numbers, ol.page-numbers {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+ul.page-numbers li .page-numbers, ol.page-numbers li .page-numbers {
+  display: block;
+  padding: 0.25rem 0.5rem;
+  color: #003acf;
+  border: 1px solid #003acf;
+  border-right: none;
+}
+
+ul.page-numbers li .page-numbers.current, ol.page-numbers li .page-numbers.current {
+  background-color: #003acf;
+  color: #fff;
+}
+
+ul.page-numbers li:first-child .page-numbers, ol.page-numbers li:first-child .page-numbers {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+ul.page-numbers li:last-child .page-numbers, ol.page-numbers li:last-child .page-numbers {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  border-right: 1px solid #003acf;
+}
+
 /*--------------------------------------------------------------
 ## Hero
 --------------------------------------------------------------*/
@@ -1372,8 +1441,15 @@ p.site-title {
 # Layouts
 --------------------------------------------------------------*/
 .site-content {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .site-content {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 
 .container {
@@ -2226,7 +2302,6 @@ object {
   padding-top: 1rem;
   padding-bottom: 1rem;
   text-align: center;
-  text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2238,6 +2313,22 @@ object {
   justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+@media only screen and (min-width: 768px) {
+  .site-footer-inner {
+    text-align: left;
+  }
+}
+
+.site-footer-inner .site-info {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .site-footer-inner .site-info {
+    width: auto;
+  }
 }
 
 .footer-menu #footer-menu {
@@ -2282,6 +2373,7 @@ object {
 }
 
 .back-to-top {
+  font-fmaily: 'Source Sans Pro';
   position: fixed;
   right: 1rem;
   bottom: 1rem;
@@ -2296,26 +2388,6 @@ object {
 
 .back-to-top:hover, .back-to-top:focus, .back-to-top:active {
   color: #fff;
-}
-
-.back-to-top::before {
-  content: "\f343";
-  font-family: 'dashicons';
-  display: inline-block;
-  line-height: 1;
-  font-weight: 400;
-  font-style: normal;
-  speak: none;
-  text-decoration: inherit;
-  text-transform: none;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  width: 20px;
-  height: 20px;
-  font-size: 20px;
-  vertical-align: top;
-  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

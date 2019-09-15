@@ -155,7 +155,7 @@ Kirki::add_section( 'typography_options', array(
 
 // Add Layout section
 Kirki::add_section( 'layout_options', array(
-	'title'			=> esc_html__( 'Layout', 'wsubusiness' ),
+	'title'			=> esc_html__( 'Site Layout', 'wsubusiness' ),
 	'priority'	=> 160,
 ) );
 
@@ -263,8 +263,25 @@ Kirki::add_field( 'wsubusiness_kirki', array(
 	'transport'	=> 'auto',
 	'output'		=> array(
 		array(
-			'element' => array( 'body', '.nav-links a', '.entry-title a' ),
+			'element' => array(
+				'body',
+				'.nav-links a',
+				'.entry-title a',
+			),
 			'property' => 'color',
+		),
+		array(
+			'element' => array(
+				'.woocommerce-EditAccountForm fieldset',
+				'.shop_table',
+				'.shop_table th',
+				'.shop_table td',
+				'.woocommerce-tabs ul.tabs li a',
+				'.woocommerce-tabs .panel',
+				'.widget_shopping_cart',
+				
+			),
+			'property' => 'border-color',
 		),
 	),
 ) );
@@ -298,10 +315,8 @@ Kirki::add_field( 'wsubusiness_kirki', array(
 				'.bypostauthor .comment-content',
 				'.button.primary',
 				'.primary',
-				'.wp-block-table th',
-				'table th',
-				'table thead th',
-				'th',
+				'ul.page-numbers li .page-numbers.current',
+				'ol.page-numbers li .page-numbers.current',
 			),
 			'property' => 'color',
 		),
@@ -325,6 +340,9 @@ Kirki::add_field( 'wsubusiness_kirki', array(
 			'element' => array(
 				'.button.secondary',
 				'.secondary',
+				'.woocommerce-mini-cart__buttons .button.checkout',
+				'.onsale',
+				'.shop_table button[name="update_cart"]',
 			),
 			'property' => 'background-color',
 		),
@@ -344,6 +362,9 @@ Kirki::add_field( 'wsubusiness_kirki', array(
 			'element' => array(
 				'.button.secondary',
 				'.secondary',
+				'.woocommerce-mini-cart__buttons .button.checkout',
+				'.onsale',
+				'.shop_table button[name="update_cart"]',
 			),
 			'property' => 'color',
 		),

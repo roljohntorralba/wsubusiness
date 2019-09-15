@@ -1,7 +1,7 @@
 // Featured image styles
 
 .site-header.featured-image {
-	padding: 4rem 0;
+	padding: 2rem 0;
 
 	/* Need relative positioning to properly align layers. */
 	position: relative;
@@ -9,6 +9,7 @@
 	@include respond(tablet) {
 		/* Hide overflow for overflowing featured image */
 		overflow: hidden;
+		padding: 4rem 0;
 	}
 
 	.main-navigation .sub-menu a {
@@ -48,9 +49,11 @@
 
 		.entry-header {
 
-			margin-top: 4rem;
+			margin-top: 2rem;
 			margin-bottom: 0;
-
+			@include respond(tablet) {
+				margin-top: 4rem;
+			}
 			.entry-title {
 
 				&:before {
