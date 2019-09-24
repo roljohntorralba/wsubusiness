@@ -83,7 +83,7 @@ function wsubusiness_panels_js() {
 add_action( 'customize_controls_enqueue_scripts', 'wsubusiness_panels_js' );
 
 /**
- * Is active callback function for CTA Top Widget
+ * Active callback function for CTA Top Widget
  */
 function wsubusiness_widget_cta_top_active() {
 	if( is_active_sidebar( 'cta-top-1' ) ) {
@@ -94,7 +94,7 @@ function wsubusiness_widget_cta_top_active() {
 }
 
 /**
- * Is active callback function for After Content Widget
+ * Active callback function for After Content Widget
  */
 function wsubusiness_widget_after_content_active() {
 	if( is_active_sidebar( 'after-content-1' ) ) {
@@ -105,7 +105,7 @@ function wsubusiness_widget_after_content_active() {
 }
 
 /**
- * Is active callback function for CTA Bottom Widget
+ * Active callback function for CTA Bottom Widget
  */
 function wsubusiness_widget_cta_bottom_active() {
 	if( is_active_sidebar( 'cta-bot-1' ) ) {
@@ -116,7 +116,7 @@ function wsubusiness_widget_cta_bottom_active() {
 }
 
 /**
- * Is active callback function for Footer Widget
+ * Active callback function for Footer Widget
  */
 function wsubusiness_widget_footer_active() {
 	if( is_active_sidebar( 'footer-1' ) ) {
@@ -127,14 +127,21 @@ function wsubusiness_widget_footer_active() {
 }
 
 /**
- * Is active callback function for all extra Widgets
+ * Active callback function for all extra Widgets
  */
 function wsubusiness_widgets_active() {
-	if( is_active_sidebar( 'cta-top-1' ) && is_active_sidebar( 'after-content-1' ) && is_active_sidebar( 'cta-bot-1' ) && is_active_sidebar( 'footer-1' ) ) {
+	if( is_active_sidebar( 'cta-top-1' ) || is_active_sidebar( 'after-content-1' ) || is_active_sidebar( 'cta-bot-1' ) || is_active_sidebar( 'footer-1' ) ) {
 		return true;
 	} else {
 		return false;
 	}
+}
+
+/**
+ * Sanitize callback function for all extra Widgets
+ */
+function wsubusiness_sanitize_copyright_text( $value ) {
+	return $value;
 }
 
 // Kirki configuration to make the theme unique
@@ -149,7 +156,7 @@ Kirki::add_config( 'wsubusiness_kirki', array(
 
 // Add Typography section
 Kirki::add_section( 'typography_options', array(
-	'title'			=> esc_html__( 'Typography', 'wsubusiness' ),
+	'title'			=> esc_html__( 'Site Typography', 'wsubusiness' ),
 	'priority'	=> 160,
 ) );
 
@@ -161,7 +168,7 @@ Kirki::add_section( 'layout_options', array(
 
 // Add Footer section
 Kirki::add_section( 'footer_options', array(
-	'title'			=> esc_html__( 'Footer', 'wsubusiness' ),
+	'title'			=> esc_html__( 'Site Footer', 'wsubusiness' ),
 	'priority'	=> 160,
 ) );
 
@@ -660,7 +667,6 @@ Kirki::add_field( 'wsubusiness_kirki', array(
 			'units' => 'px',
 		)
 	),
-	'active_callback' => 'has_custom_logo',
 ) );
 
 // Sidebar position select
@@ -684,6 +690,7 @@ Kirki::add_field( 'wsubusiness_kirki', array(
 	'section'  => 'footer_options',
 	'default'  => '',
 	'transport'=> 'postMessage',
+	'sanitize_callback' => 'wsubusiness_sanitize_copyright_text',
 ) );
 
 // Switch to hide or show the footer menu
@@ -712,37 +719,7 @@ Kirki::add_field( 'wsubusiness_kirki', array(
 	),
 ) );
 
-// Body Font
-Kirki::add_field( 'wsubusiness_kirki', array(
-	'type'        => 'typography',
-	'settings'    => 'typography_body',
-	'label'       => esc_html__( 'Body Font', 'kirki' ),
-	'section'     => 'typography_options',
-	'default'     => array(
-		'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif',
-		'variant'        => 'regular',
-		'line-height'    => '1.685',
-		'text-transform' => 'none',
-	),
-	'priority'    => 10,
-	'choices' => array(
-		'fonts' => array(
-			'google'   => array( 'popularity', 50 ),
-			'standard' => array(
-				'Georgia,Times,"Times New Roman",serif',
-				'-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif',
-			),
-		),
-	),
-	'transport'   => 'auto',
-	'output'      => array(
-		array(
-			'element' => 'body',
-		),
-	),
-) );
-
-// Body Font
+// Heading Font
 Kirki::add_field( 'wsubusiness_kirki', array(
 	'type'        => 'typography',
 	'settings'    => 'typography_headings',
@@ -776,5 +753,48 @@ Kirki::add_field( 'wsubusiness_kirki', array(
 				'h6',
 			),
 		),
+	),
+) );
+
+// Body Font
+Kirki::add_field( 'wsubusiness_kirki', array(
+	'type'        => 'typography',
+	'settings'    => 'typography_body',
+	'label'       => esc_html__( 'Body Font', 'kirki' ),
+	'section'     => 'typography_options',
+	'default'     => array(
+		'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif',
+		'variant'        => 'regular',
+		'line-height'    => '1.685',
+		'text-transform' => 'none',
+	),
+	'priority'    => 10,
+	'choices' => array(
+		'fonts' => array(
+			'google'   => array( 'popularity', 50 ),
+			'standard' => array(
+				'Georgia,Times,"Times New Roman",serif',
+				'-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif',
+			),
+		),
+	),
+	'transport'   => 'auto',
+	'output'      => array(
+		array(
+			'element' => 'body',
+		),
+	),
+) );
+
+// Widget Title Transform
+Kirki::add_field( 'wsubusiness_kirki', array(
+	'type'        => 'radio',
+	'settings'    => 'title_widget_transform',
+	'label'       => esc_html__( 'Widget Title Text Transform', 'wsubusiness' ),
+	'section'     => 'typography_options',
+	'default'     => 'uppercase',
+	'choices'     => array(
+		'uppercase'   => esc_html__( 'Uppercase', 'wsubusiness' ),
+		'none' => esc_html__( 'None', 'wsubusiness' ),
 	),
 ) );

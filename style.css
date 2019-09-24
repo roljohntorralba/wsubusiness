@@ -1,14 +1,14 @@
 /*!
 Theme Name: WebsiteSetup Business
 Theme URI: http://underscores.me/
-Author: Website Setup
+Author: WebsiteSetup
 Author URI: https://websitesetup.org
-Description: Website Setup Business Theme
+Description: Our theme is designed mainly for business owners who are looking to customize their websites without touching any code. It features custom widgets, header, colors, typography, and more to transform your ordinary blog to a professional website that looks good on all screen sizes.
 Version: 1.0.0
 License: GNU General Public License v2 or later
-License URI: LICENSE
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: wsubusiness
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: blog, portfolio, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, two-columns, footer-widgets, full-width-template, theme-options, wide-blocks 
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -1059,9 +1059,8 @@ a:hover, a:active {
   outline: 0;
 }
 
-#main article .entry-content a:not(.wp-block-button__link) {
-  -webkit-box-shadow: 0 1px 0 0 currentColor;
-  box-shadow: 0 1px 0 0 currentColor;
+#main article .entry-content a:not(.wp-block-button__link):not(.button) {
+  text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
@@ -1076,6 +1075,12 @@ a:hover, a:active {
   .site-branding {
     width: auto;
   }
+}
+
+.site-branding .custom-logo-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .site-title {
@@ -1498,40 +1503,6 @@ ul.page-numbers li:last-child .page-numbers, ol.page-numbers li:last-child .page
   }
 }
 
-.page-template-template-fullwidth .content-area,
-.page-template-template-fullwidth .site-header.featured-image .entry-header,
-.post-template-template-fullwidth .content-area,
-.post-template-template-fullwidth .site-header.featured-image .entry-header {
-  max-width: 840px;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  float: none;
-  padding: 0;
-}
-
-.page-template-template-fullwidth .site-header.featured-image .entry-header,
-.post-template-template-fullwidth .site-header.featured-image .entry-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.page-template-template-fullwidth .site-header.featured-image .entry-header .cat-links,
-.post-template-template-fullwidth .site-header.featured-image .entry-header .cat-links {
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
 .flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1644,6 +1615,11 @@ ul.page-numbers li:last-child .page-numbers, ol.page-numbers li:last-child .page
   margin-bottom: 0;
 }
 
+.cta-top-widget-area p:last-of-type,
+.cta-bot-widget-area p:last-of-type {
+  margin-bottom: 0;
+}
+
 .cta-top-widget-area {
   background-color: #D4D9E6;
   padding: 1.5rem 0;
@@ -1741,10 +1717,61 @@ ul.page-numbers li:last-child .page-numbers, ol.page-numbers li:last-child .page
   opacity: 1;
 }
 
-/* Styling for Wide and Full blocks */
+/* Styling of elements for Full Width Pages */
+.page-template-template-fullwidth .content-area,
+.page-template-template-fullwidth .site-header.featured-image .entry-header,
+.post-template-template-fullwidth .content-area,
+.post-template-template-fullwidth .site-header.featured-image .entry-header,
+.page-template-template-blank .content-area,
+.page-template-template-blank .site-header.featured-image .entry-header,
+.post-template-template-blank .content-area,
+.post-template-template-blank .site-header.featured-image .entry-header {
+  max-width: 840px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  float: none;
+  padding: 0;
+}
+
+.page-template-template-fullwidth .site-header.featured-image .entry-header,
+.post-template-template-fullwidth .site-header.featured-image .entry-header,
+.page-template-template-blank .site-header.featured-image .entry-header,
+.post-template-template-blank .site-header.featured-image .entry-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.page-template-template-fullwidth .site-header.featured-image .entry-header .entry-title,
+.post-template-template-fullwidth .site-header.featured-image .entry-header .entry-title,
+.page-template-template-blank .site-header.featured-image .entry-header .entry-title,
+.post-template-template-blank .site-header.featured-image .entry-header .entry-title {
+  text-align: center;
+}
+
+.page-template-template-fullwidth .site-header.featured-image .entry-header .cat-links,
+.post-template-template-fullwidth .site-header.featured-image .entry-header .cat-links,
+.page-template-template-blank .site-header.featured-image .entry-header .cat-links,
+.post-template-template-blank .site-header.featured-image .entry-header .cat-links {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
 @media only screen and (min-width: 1025px) {
   .page-template-template-fullwidth .align-wrap-wide,
-  .post-template-template-fullwidth .align-wrap-wide {
+  .post-template-template-fullwidth .align-wrap-wide,
+  .page-template-template-blank .align-wrap-wide,
+  .post-template-template-blank .align-wrap-wide {
     width: calc(100% + 2 * 4rem);
     max-width: none;
     margin-left: -4rem;
@@ -1753,21 +1780,43 @@ ul.page-numbers li:last-child .page-numbers, ol.page-numbers li:last-child .page
 }
 
 .page-template-template-fullwidth .align-wrap-full,
-.post-template-template-fullwidth .align-wrap-full {
+.post-template-template-fullwidth .align-wrap-full,
+.page-template-template-blank .align-wrap-full,
+.post-template-template-blank .align-wrap-full {
   width: 100vw;
   margin-left: calc(50% - 50vw);
 }
 
 .page-template-template-fullwidth .align-wrap-wide .alignwide,
-.post-template-template-fullwidth .align-wrap-wide .alignwide {
+.post-template-template-fullwidth .align-wrap-wide .alignwide,
+.page-template-template-blank .align-wrap-wide .alignwide,
+.post-template-template-blank .align-wrap-wide .alignwide {
   margin: 0;
 }
 
 .page-template-template-fullwidth .align-wrap-full .alignfull,
-.post-template-template-fullwidth .align-wrap-full .alignfull {
+.post-template-template-fullwidth .align-wrap-full .alignfull,
+.page-template-template-blank .align-wrap-full .alignfull,
+.post-template-template-blank .align-wrap-full .alignfull {
   width: 100%;
   max-width: 100%;
   margin: 0 auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .page-template-template-fullwidth .site-header.featured-image,
+  .page-template-template-blank .site-header.featured-image {
+    padding: 4rem 0 6rem;
+  }
+}
+
+.page-template-template-blank .site-content,
+.post-template-template-blank .site-content {
+  padding: 0;
+}
+
+.wp-block-cover-image .wp-block-cover-image-text, .wp-block-cover-image .wp-block-cover-text, .wp-block-cover-image h2, .wp-block-cover .wp-block-cover-image-text, .wp-block-cover .wp-block-cover-text, .wp-block-cover h2 {
+  max-width: 100%;
 }
 
 @media only screen and (min-width: 1025px) {
@@ -1894,7 +1943,7 @@ body:not(.blog) article .entry-meta .cat-links {
 
 .blog .entry-title {
   padding-top: 1.5rem;
-  font-size: 1.375rem;
+  font-size: 1.5rem;
 }
 
 .blog .entry-header .post-thumbnail + .entry-title {

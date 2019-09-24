@@ -22,7 +22,7 @@
 		<div class="site-footer-inner container">
 			<div id="colophon" class="site-info">
 				<?php if( get_theme_mod( 'footer_copyright_text' ) ) : ?>
-					<?php printf( '%1$s', get_theme_mod('footer_copyright_text') ); ?>
+					<?php printf( '%1$s', get_theme_mod('footer_copyright_text') ); /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ ?>
 				<?php else: ?>
 					<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wsubusiness' ) ); ?>">
 						<?php

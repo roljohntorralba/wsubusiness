@@ -33,7 +33,7 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<?php if ( get_edit_post_link() ) : ?>
+	<?php if ( get_edit_post_link() && !is_page_template('template-blank.php') ) : ?>
 		<footer class="entry-footer">
 			<?php
 			edit_post_link(

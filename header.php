@@ -19,12 +19,17 @@
 
 	<?php wp_head(); ?>
 	<?php
-	if( get_header_image() && !is_woocommerce() ) :
-		$background_image = has_post_thumbnail() ? get_the_post_thumbnail_url() : get_header_image();
+	$has_post_thumbnail = get_header_image();
+	if( function_exists( 'is_woocommerce' ) )
+		$has_post_thumbnail = get_header_image() && !is_woocommerce();
+
+
+	if( $has_post_thumbnail ) :
+		$background_image = has_post_thumbnail() && !is_home() ? get_the_post_thumbnail_url() : get_header_image();
 	?>
 		<style type="text/css" id="header-image-background">
 			.site-header.featured-image {
-				background: <?php echo get_theme_mod( 'header_filter_color', '#003acf' ); echo ' url(' . $background_image . ') '; ?> no-repeat center;
+				background: <?php echo get_theme_mod( 'header_filter_color', '#003acf' ); echo ' url(' . $background_image . ') '; /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ ?> no-repeat center;
 				background-size: -webkit-cover;
 				background-size: cover;
 			}
@@ -36,7 +41,7 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wsubusiness' ); ?></a>
 
-	<header id="masthead" class="site-header <?php $header_class = get_header_image() ? 'featured-image' : ''; echo $header_class; ?>">
+	<header id="masthead" class="site-header <?php $header_class = get_header_image() ? 'featured-image' : ''; echo esc_attr( $header_class ); ?>">
 		<div class="site-header-inner container">
 			<div class="site-branding">
 				<?php
@@ -53,7 +58,7 @@
 				$wsubusiness_description = get_bloginfo( 'description', 'display' );
 				if ( $wsubusiness_description || is_customize_preview() ) :
 					?>
-					<p class="site-description"><?php echo $wsubusiness_description; /* WPCS: xss ok. */ ?></p>
+					<p class="site-description"><?php echo $wsubusiness_description; /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ ?></p>
 				<?php endif; ?>
 			</div><!-- .site-branding -->
 
@@ -77,7 +82,12 @@
 
 		<?php if( get_header_image() ) : ?>
 			<div class="site-featured-image container">				
-				<?php if( is_singular() && !is_woocommerce() ) : ?>
+				<?php
+				$is_single_page = is_singular();
+				if( function_exists( 'is_woocommerce' ) )
+					$is_single_page = is_singular() && !is_woocommerce();
+				if( $is_single_page ) :
+				?>
 					<div class="entry-header">
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 						<?php if ( 'post' === get_post_type() ) : ?>
@@ -99,4 +109,4 @@
 	<?php get_sidebar('ctatop'); ?>
 
 	<div id="content" class="site-content">
-		<div class="site-content-inner container clear <?php $sidebar_position = 'right' == get_theme_mod('layout_sidebar_position', 'right') ? 'sidebar-right' : 'sidebar-left'; echo $sidebar_position; ?>">
+		<div class="site-content-inner container clear <?php $sidebar_position = 'right' == get_theme_mod('layout_sidebar_position', 'right') ? 'sidebar-right' : 'sidebar-left'; echo esc_attr( $sidebar_position ); ?>">

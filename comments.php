@@ -30,17 +30,17 @@ if ( post_password_required() ) {
 			<?php
 			$wsubusiness_comment_count = get_comments_number();
 			if ( '1' === $wsubusiness_comment_count ) {
-				printf(
+				printf( // phpcs:ignore WordPress.Security.EscapeOutput
 					/* translators: 1: title. */
 					esc_html__( 'One thought on &ldquo;%1$s&rdquo;', 'wsubusiness' ),
-					'<span>' . get_the_title() . '</span>'
+					'<span>' . get_the_title() . '</span>' // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				);
 			} else {
-				printf( // WPCS: XSS OK.
+				printf( // phpcs:ignore WordPress.Security.EscapeOutput
 					/* translators: 1: comment count number, 2: title. */
 					esc_html( _nx( '%1$s thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', $wsubusiness_comment_count, 'comments title', 'wsubusiness' ) ),
-					number_format_i18n( $wsubusiness_comment_count ),
-					'<span>' . get_the_title() . '</span>'
+					number_format_i18n( $wsubusiness_comment_count ), // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					'<span>' . get_the_title() . '</span>' // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 				);
 			}
 			?>

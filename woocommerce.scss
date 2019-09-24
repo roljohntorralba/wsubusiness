@@ -82,7 +82,7 @@ WooCommerce styles override
 
 .woocommerce:not(.woocommerce-checkout):not(.woocommerce-cart), .woocommerce-page:not(.woocommerce-checkout):not(.woocommerce-cart):not(.woocommerce-account) {
  	.site-header.featured-image {
-		padding: 1rem 0;
+		padding: 1.75rem 0;
 	}
 	#content div.product div.images, div.product div.images,
 	#content div.product div.summary, div.product div.summary {
@@ -155,11 +155,6 @@ WooCommerce styles override
 		list-style: none;
 		padding: 0;
 		margin: 0;
-		li {
-			a {
-				box-shadow: none !important;
-			}
-		}
 	}
 	@include respond(tablet) {
 		ul {
@@ -180,9 +175,6 @@ WooCommerce styles override
 	margin-top: 1rem;
 	@include respond(tablet) {
 		font-size: 0.875rem;
-	}
-	a {
-		box-shadow: none !important;
 	}
 	p {
 		margin-bottom: 0.75rem;
@@ -1099,7 +1091,7 @@ p.stars {
 }
 
 .woocommerce-cart {
-	#main article .entry-content a:not(.wp-block-button__link) {
+	#main article .entry-content a:not(.wp-block-button__link):not(.button) {
 		box-shadow: none;
 	}
 	.wc-proceed-to-checkout {

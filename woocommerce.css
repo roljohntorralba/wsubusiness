@@ -64,7 +64,7 @@ WooCommerce styles override
       margin: 1rem 2rem 0 0; } }
 
 .woocommerce:not(.woocommerce-checkout):not(.woocommerce-cart) .site-header.featured-image, .woocommerce-page:not(.woocommerce-checkout):not(.woocommerce-cart):not(.woocommerce-account) .site-header.featured-image {
-  padding: 1rem 0; }
+  padding: 1.75rem 0; }
 
 .woocommerce:not(.woocommerce-checkout):not(.woocommerce-cart) #content div.product div.images, .woocommerce:not(.woocommerce-checkout):not(.woocommerce-cart) div.product div.images,
 .woocommerce:not(.woocommerce-checkout):not(.woocommerce-cart) #content div.product div.summary, .woocommerce:not(.woocommerce-checkout):not(.woocommerce-cart) div.product div.summary, .woocommerce-page:not(.woocommerce-checkout):not(.woocommerce-cart):not(.woocommerce-account) #content div.product div.images, .woocommerce-page:not(.woocommerce-checkout):not(.woocommerce-cart):not(.woocommerce-account) div.product div.images,
@@ -123,9 +123,6 @@ WooCommerce styles override
     list-style: none;
     padding: 0;
     margin: 0; }
-    .woocommerce-MyAccount-navigation ul li a {
-      -webkit-box-shadow: none !important;
-      box-shadow: none !important; }
   @media only screen and (min-width: 768px) {
     .woocommerce-MyAccount-navigation ul {
       display: -webkit-box;
@@ -145,9 +142,6 @@ WooCommerce styles override
   @media only screen and (min-width: 768px) {
     .woocommerce-MyAccount-content {
       font-size: 0.875rem; } }
-  .woocommerce-MyAccount-content a {
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important; }
   .woocommerce-MyAccount-content p {
     margin-bottom: 0.75rem; }
 
@@ -889,7 +883,7 @@ p.stars.selected a:not(.active):before {
       .woocommerce-mini-cart__buttons .button:first-of-type {
         margin-right: 4%; } }
 
-.woocommerce-cart #main article .entry-content a:not(.wp-block-button__link) {
+.woocommerce-cart #main article .entry-content a:not(.wp-block-button__link):not(.button) {
   -webkit-box-shadow: none;
   box-shadow: none; }
 

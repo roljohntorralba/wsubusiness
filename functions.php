@@ -92,8 +92,8 @@ if ( ! function_exists( 'wsubusiness_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 250,
-			'width'       => 250,
+			'height'      => 76,
+			'width'       => 390,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -113,6 +113,7 @@ function wsubusiness_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
 	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+	// phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
 	$GLOBALS['content_width'] = apply_filters( 'wsubusiness_content_width', 764 );
 }
 add_action( 'after_setup_theme', 'wsubusiness_content_width', 0 );
@@ -232,14 +233,14 @@ function wsubusiness_colors_css_wrap() {
 	?>
 
 	<style type="text/css" id="custom-primary-css">
-		<?php echo wsubusiness_custom_colors_css(); ?>
+		<?php echo wsubusiness_custom_colors_css(); /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ ?>
 	</style>
 	<?php
 }
 add_action( 'wp_head', 'wsubusiness_colors_css_wrap' );
 
 /**
- * Display custom logo sizing CSS.
+ * Display custom layout CSS
  */
 function wsubusiness_custom_layout_css() {
 
@@ -249,12 +250,18 @@ function wsubusiness_custom_layout_css() {
 
 	<style type="text/css" id="custom-logo-size">
 		.custom-logo {
-			max-width: <?php echo $logo_size; ?>px;
+			max-width: <?php echo esc_html($logo_size); ?>px;
 		}
 		.container,
 		.wp-block-cover__inner-container {
-			max-width: <?php echo $container_size; ?>px;
+			max-width: <?php echo esc_html($container_size); ?>px;
 		}
+		<?php if( 'uppercase' !== get_theme_mod( 'title_widget_transform', 'uppercase' ) ) : ?>
+		.widget .widget-title {
+			text-transform: <?php echo esc_html( get_theme_mod( 'title_widget_transform', 'uppercase' ) ); ?>; 
+			letter-spacing: 0;
+		}
+		<?php endif; ?>
 	</style>
 	<?php
 }

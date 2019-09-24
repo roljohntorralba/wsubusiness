@@ -102,7 +102,7 @@ final class Kirki_Fonts_Helper {
 		}
 
 		// Gives us access to the download_url() and wp_handle_sideload() functions.
-		require_once ABSPATH . 'wp-admin/includes/file.php';
+		require_once ABSPATH . 'wp-admin/includes/file.php'; // phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 
 		$timeout_seconds = 5;
 

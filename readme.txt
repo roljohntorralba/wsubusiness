@@ -1,19 +1,19 @@
 === WebsiteSetup Business ===
 
-Contributors: automattic
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Contributors: automattic, rolzan
+Tags: blog, portfolio, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, two-columns, footer-widgets, full-width-template, theme-options, wide-blocks 
 
 Requires at least: 4.5
-Tested up to: 4.8
+Tested up to: 5.2
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
-License URI: LICENSE
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A starter theme called WebsiteSetup Business.
+Our theme is designed mainly for business owners who are looking to customize their websites without touching any code. It features custom widgets, header, colors, typography, and more to transform your ordinary blog to a professional website that looks good on all screen sizes.
 
 == Description ==
 
-Website Setup Business Theme
+Our theme is designed mainly for business owners who are looking to customize their websites without touching any code. It features custom widgets, header, colors, typography, and more to transform your ordinary blog to a professional website that looks good on all screen sizes.
 
 == Installation ==
 
@@ -29,10 +29,11 @@ WebsiteSetup Business includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 1.0 - September 25 2019 =
 * Initial release
 
 == Credits ==
 
 * Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
+* Kirki https://kirki.org/
