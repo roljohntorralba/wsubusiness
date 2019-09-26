@@ -27,7 +27,7 @@
 		value.bind( function( to ) {
 
 			// Update custom color CSS.
-			var style = $( '#custom-primary-css' ),
+			var style = $( '#wsubusiness-style-inline-css' ),
 				css = style.html(),
 				regexHex = /#([a-f0-9]{3}){1,2}\b/gi; // regex pattern to select all HEX colors
 

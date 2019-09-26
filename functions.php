@@ -176,11 +176,7 @@ add_action( 'widgets_init', 'wsubusiness_widgets_init' );
  * Enqueue scripts and styles.
  */
 function wsubusiness_scripts() {
-	// Enables Dashicons on Blog and Single Posts
-	if ( get_post_type() == 'post' || is_home() ) {
-		wp_enqueue_style('dashicons');
-	}
-	wp_enqueue_style( 'hamburgers-style', get_template_directory_uri() . '/css/hamburgers.min.css' );
+
 	wp_enqueue_style( 'wsubusiness-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'wsubusiness-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
@@ -192,6 +188,37 @@ function wsubusiness_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	//* Display custom color CSS in customizer and on frontend.
+	// Proceeds if primary_color is changed
+	if ( !'#003acf' === get_theme_mod( 'primary_color', '#003acf' ) ) {
+		require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
+		wp_add_inline_style( 'wsubusiness-style', wsubusiness_custom_colors_css() );	
+	}
+
+	//* Custom logo sizer
+	$logo_size = get_theme_mod( 'custom_logo_size', 200);
+	$container_size = get_theme_mod( 'custom_container_size', 1200);
+	$logo_inline_style = '
+		.custom-logo {
+			max-width: ' . esc_html($logo_size) . 'px;
+		}
+		.container,
+		.wp-block-cover__inner-container {
+			max-width: ' . esc_html($container_size) . 'px;
+		}
+	';
+	// Adds widget-title inline styles if title_widget_transform is changed
+	if( 'uppercase' !== get_theme_mod( 'title_widget_transform', 'uppercase' ) ) {
+		$logo_inline_style .= '
+			.widget .widget-title {
+				text-transform: ' . esc_html( get_theme_mod( 'title_widget_transform', 'uppercase' ) ) . '; 
+				letter-spacing: 0;
+			}
+		';
+	}
+	wp_add_inline_style( 'wsubusiness-style', $logo_inline_style );
+
 }
 add_action( 'wp_enqueue_scripts', 'wsubusiness_scripts' );
 
@@ -211,61 +238,11 @@ function wsubusiness_editor_customizer_styles() {
 
 	wp_enqueue_style( 'wsubusiness-editor-customizer-styles', get_theme_file_uri( '/style-editor-customizer.css' ), false, '1.1', 'all' );
 
-		// Include color patterns.
-		require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
-		wp_add_inline_style( 'wsubusiness-editor-customizer-styles', wsubusiness_custom_colors_css() );
+	// Include color patterns.
+	require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
+	wp_add_inline_style( 'wsubusiness-editor-customizer-styles', wsubusiness_custom_colors_css() );
 }
 add_action( 'enqueue_block_editor_assets', 'wsubusiness_editor_customizer_styles' );
-
-/**
- * Display custom color CSS in customizer and on frontend.
- */
-function wsubusiness_colors_css_wrap() {
-
-	// Only include custom colors in customizer or frontend.
-	if ( ( ! is_customize_preview() && '#003acf' === get_theme_mod( 'primary_color', '#003acf' ) ) || is_admin() ) {
-		return;
-	}
-
-	require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
-
-	$primary_color = get_theme_mod( 'primary_color', '#003acf');
-	?>
-
-	<style type="text/css" id="custom-primary-css">
-		<?php echo wsubusiness_custom_colors_css(); /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ ?>
-	</style>
-	<?php
-}
-add_action( 'wp_head', 'wsubusiness_colors_css_wrap' );
-
-/**
- * Display custom layout CSS
- */
-function wsubusiness_custom_layout_css() {
-
-	$logo_size = get_theme_mod( 'custom_logo_size', 200);
-	$container_size = get_theme_mod( 'custom_container_size', 1200);
-	?>
-
-	<style type="text/css" id="custom-logo-size">
-		.custom-logo {
-			max-width: <?php echo esc_html($logo_size); ?>px;
-		}
-		.container,
-		.wp-block-cover__inner-container {
-			max-width: <?php echo esc_html($container_size); ?>px;
-		}
-		<?php if( 'uppercase' !== get_theme_mod( 'title_widget_transform', 'uppercase' ) ) : ?>
-		.widget .widget-title {
-			text-transform: <?php echo esc_html( get_theme_mod( 'title_widget_transform', 'uppercase' ) ); ?>; 
-			letter-spacing: 0;
-		}
-		<?php endif; ?>
-	</style>
-	<?php
-}
-add_action( 'wp_head', 'wsubusiness_custom_layout_css' );
 
 /**
  * Implement the Custom Header feature.

@@ -3,13 +3,13 @@
 Contributors: automattic, rolzan
 Tags: blog, portfolio, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, two-columns, footer-widgets, full-width-template, theme-options, wide-blocks 
 
-Requires at least: 4.5
+Requires at least: 5.0
 Tested up to: 5.2
 Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Our theme is designed mainly for business owners who are looking to customize their websites without touching any code. It features custom widgets, header, colors, typography, and more to transform your ordinary blog to a professional website that looks good on all screen sizes.
+A customizable theme for business websites.
 
 == Description ==
 
@@ -25,7 +25,7 @@ Our theme is designed mainly for business owners who are looking to customize th
 
 = Does this theme support any plugins? =
 
-WebsiteSetup Business includes support for Infinite Scroll in Jetpack.
+WebsiteSetup Business includes support for Infinite Scroll in Jetpack, Woocommerce when installed, and major Page Builder plugins.
 
 == Changelog ==
 
@@ -36,4 +36,5 @@ WebsiteSetup Business includes support for Infinite Scroll in Jetpack.
 
 * Based on Underscores https://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css https://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](https://opensource.org/licenses/MIT)
-* Kirki https://kirki.org/
+* Kirki https://github.com/aristath/kirki, (C) aristath, [MIT](https://opensource.org/licenses/MIT)
+* Hamburgers https://github.com/jonsuh/hamburgers, (C) Jonathan Suh, [MIT](https://opensource.org/licenses/MIT)

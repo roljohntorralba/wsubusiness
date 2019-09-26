@@ -1,13 +1,12 @@
 /*!
 Theme Name: WebsiteSetup Business
-Theme URI: http://underscores.me/
 Author: WebsiteSetup
-Author URI: https://websitesetup.org
+Author URI: https://websitesetup.org/about-and-contact/
 Description: Our theme is designed mainly for business owners who are looking to customize their websites without touching any code. It features custom widgets, header, colors, typography, and more to transform your ordinary blog to a professional website that looks good on all screen sizes.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: wsubusiness
+Text Domain: wsubusiness, kirki
 Tags: blog, portfolio, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, two-columns, footer-widgets, full-width-template, theme-options, wide-blocks 
 
 This theme, like WordPress, is licensed under the GPL.
@@ -24,6 +23,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
 # Normalize
+# Hamburgers
 # Site Featured Image
 # Typography
 # Elements
@@ -56,6 +56,9 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 
 //* Normalize */
 @import 'sass/normalize';
+
+//* Hamburgers */
+@import 'sass/hamburgers/hamburgers';
 
 //* Site Featured Image */
 @import 'sass/site-featured-image';
