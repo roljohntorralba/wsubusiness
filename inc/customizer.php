@@ -697,12 +697,12 @@ Kirki::add_field( 'wsubusiness_kirki', array(
 Kirki::add_field( 'wsubusiness_kirki', array(
 	'type'        => 'switch',
 	'settings'    => 'footer_menu_switch',
-	'label'       => esc_html__( 'Footer Menu', 'kirki' ),
+	'label'       => esc_html__( 'Footer Menu', 'wsubusiness' ),
 	'section'     => 'footer_options',
 	'default'     => '0',
 	'choices'     => array(
-		'on'  => esc_html__( 'Show', 'kirki' ),
-		'off' => esc_html__( 'Hide', 'kirki' ),
+		'on'  => esc_html__( 'Show', 'wsubusiness' ),
+		'off' => esc_html__( 'Hide', 'wsubusiness' ),
 	),
 ) );
 
@@ -710,12 +710,12 @@ Kirki::add_field( 'wsubusiness_kirki', array(
 Kirki::add_field( 'wsubusiness_kirki', array(
 	'type'        => 'switch',
 	'settings'    => 'footer_backtotop',
-	'label'       => esc_html__( 'Back to Top', 'kirki' ),
+	'label'       => esc_html__( 'Back to Top', 'wsubusiness' ),
 	'section'     => 'footer_options',
 	'default'     => '1',
 	'choices'     => array(
-		'on'  => esc_html__( 'Show', 'kirki' ),
-		'off' => esc_html__( 'Hide', 'kirki' ),
+		'on'  => esc_html__( 'Show', 'wsubusiness' ),
+		'off' => esc_html__( 'Hide', 'wsubusiness' ),
 	),
 ) );
 
@@ -723,7 +723,7 @@ Kirki::add_field( 'wsubusiness_kirki', array(
 Kirki::add_field( 'wsubusiness_kirki', array(
 	'type'        => 'typography',
 	'settings'    => 'typography_headings',
-	'label'       => esc_html__( 'Headings Font', 'kirki' ),
+	'label'       => esc_html__( 'Headings Font', 'wsubusiness' ),
 	'section'     => 'typography_options',
 	'default'     => array(
 		'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif',
@@ -760,7 +760,7 @@ Kirki::add_field( 'wsubusiness_kirki', array(
 Kirki::add_field( 'wsubusiness_kirki', array(
 	'type'        => 'typography',
 	'settings'    => 'typography_body',
-	'label'       => esc_html__( 'Body Font', 'kirki' ),
+	'label'       => esc_html__( 'Body Font', 'wsubusiness' ),
 	'section'     => 'typography_options',
 	'default'     => array(
 		'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif',

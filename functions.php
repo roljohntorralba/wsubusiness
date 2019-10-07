@@ -191,7 +191,7 @@ function wsubusiness_scripts() {
 
 	//* Display custom color CSS in customizer and on frontend.
 	// Proceeds if primary_color is changed
-	if ( !'#003acf' === get_theme_mod( 'primary_color', '#003acf' ) ) {
+	if ( '#003acf' !== get_theme_mod( 'primary_color', '#003acf' ) ) {
 		require_once get_parent_theme_file_path( '/inc/color-patterns.php' );
 		wp_add_inline_style( 'wsubusiness-style', wsubusiness_custom_colors_css() );	
 	}

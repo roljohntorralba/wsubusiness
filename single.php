@@ -12,14 +12,13 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+		<?php do_action( 'in_site_main_top' ); ?>
 
 		<?php
 		while ( have_posts() ) :
 			the_post();
 
 			get_template_part( 'template-parts/content', get_post_type() );
-
-			get_sidebar('aftercontent');
 
 			the_post_navigation();
 
@@ -31,6 +30,9 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
+		<?php do_action( 'in_site_main_above_aftercontent' ); ?>
+		<?php get_sidebar('aftercontent'); ?>
+		<?php do_action( 'in_site_main_bot' ); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

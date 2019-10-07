@@ -17,6 +17,7 @@ get_header();
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
+		<?php do_action( 'in_site_main_top' ); ?>
 
 		<?php
 		if ( have_posts() ) :
@@ -51,6 +52,7 @@ get_header();
 		endif;
 		?>
 
+		<?php do_action( 'in_site_main_bot' ); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

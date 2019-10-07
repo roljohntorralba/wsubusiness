@@ -28,6 +28,7 @@
 					?>
 				</div><!-- .entry-meta -->
 			<?php endif; ?>
+			<?php do_action( 'in_entry_header_bottom' ); ?>
 		</div><!-- .entry-header -->
 	<?php endif; ?>
 

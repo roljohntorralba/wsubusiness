@@ -12,6 +12,8 @@ if ( ! is_active_sidebar( 'after-content-1' ) ) {
 }
 ?>
 
+<?php do_action( 'above_aftercontent' ); ?>
 <aside class="after-content-widget-area">
 	<?php dynamic_sidebar( 'after-content-1' ); ?>
 </aside><!-- .after-content-widget-area -->
+<?php do_action( 'below_aftercontent' ); ?>

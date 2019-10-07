@@ -13,5 +13,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 ?>
 
 <aside id="secondary" class="widget-area">
+	<?php do_action( 'in_sidebar_top' ); ?>
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
+	<?php do_action( 'in_sidebar_bot' ); ?>
 </aside><!-- #secondary -->

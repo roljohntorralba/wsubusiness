@@ -19,6 +19,7 @@
 	<?php if( !get_header_image() ) : ?>
 	<div class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php do_action( 'in_entry_header_bottom' ); ?>
 	</div><!-- .entry-header -->
 	<?php endif; ?>
 

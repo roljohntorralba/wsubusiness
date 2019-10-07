@@ -5,7 +5,7 @@ Tags: blog, portfolio, custom-background, custom-colors, custom-header, custom-l
 
 Requires at least: 5.0
 Tested up to: 5.2
-Stable tag: 1.0.0
+Stable tag: 2.1.0
 License: GNU General Public License v2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -29,8 +29,15 @@ WebsiteSetup Business includes support for Infinite Scroll in Jetpack, Woocommer
 
 == Changelog ==
 
-= 1.0 - September 25 2019 =
+= 1.0.1 - September 27 2019 =
 * Initial release
+
+= 2.0.0 - September 25 2019 =
+* Theme submission
+
+= 2.1.0 - October 1 2019 =
+* Added hooks for functional locations
+* Fixed customizer primary color bug
 
 == Credits ==
 

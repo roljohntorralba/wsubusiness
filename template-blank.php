@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for full width page or posts
+ * The template for full width page or posts but without the widgets and actions
  *
  * @package WebsiteSetup_Business
  * 

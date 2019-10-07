@@ -10,7 +10,9 @@
  */
 
 ?>
+		<?php do_action( 'in_site_content_inner_bot' ); ?>
 		</div><!-- .site-content-inner -->
+		<?php do_action( 'in_site_content_bot' ); ?>
 	</div><!-- #content -->
 
 	<?php get_sidebar('ctabot'); ?>
@@ -57,5 +59,6 @@
 
 <?php wp_footer(); ?>
 
+<?php do_action( 'in_body_bot' ); ?>
 </body>
 </html>

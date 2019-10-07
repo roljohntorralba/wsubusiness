@@ -42,8 +42,8 @@ Kirki::add_panel(
 	'kirki_demo_panel',
 	array(
 		'priority'    => 10,
-		'title'       => esc_html__( 'Kirki Demo Panel', 'kirki' ),
-		'description' => esc_html__( 'Contains sections for all kirki controls.', 'kirki' ),
+		'title'       => esc_html__( 'Kirki Demo Panel', 'wsubusiness' ),
+		'description' => esc_html__( 'Contains sections for all kirki controls.', 'wsubusiness' ),
 	)
 );
 
@@ -56,36 +56,36 @@ Kirki::add_panel(
  * @link https://kirki.org/docs/getting-started/sections.html
  */
 $sections = array(
-	'background'      => array( esc_html__( 'Background', 'kirki' ), '' ),
-	'code'            => array( esc_html__( 'Code', 'kirki' ), '' ),
-	'checkbox'        => array( esc_html__( 'Checkbox', 'kirki' ), '' ),
-	'color'           => array( esc_html__( 'Color', 'kirki' ), '' ),
-	'color-palette'   => array( esc_html__( 'Color Palette', 'kirki' ), '' ),
-	'custom'          => array( esc_html__( 'Custom', 'kirki' ), '' ),
-	'dashicons'       => array( esc_html__( 'Dashicons', 'kirki' ), '' ),
-	'date'            => array( esc_html__( 'Date', 'kirki' ), '' ),
-	'dimension'       => array( esc_html__( 'Dimension', 'kirki' ), '' ),
-	'dimensions'      => array( esc_html__( 'Dimensions', 'kirki' ), '' ),
-	'dropdown-pages'  => array( esc_html__( 'Dropdown Pages', 'kirki' ), '' ),
-	'editor'          => array( esc_html__( 'Editor', 'kirki' ), '' ),
-	'fontawesome'     => array( esc_html__( 'Font-Awesome', 'kirki' ), '' ),
-	'generic'         => array( esc_html__( 'Generic', 'kirki' ), '' ),
-	'image'           => array( esc_html__( 'Image', 'kirki' ), '' ),
-	'multicheck'      => array( esc_html__( 'Multicheck', 'kirki' ), '' ),
-	'multicolor'      => array( esc_html__( 'Multicolor', 'kirki' ), '' ),
-	'number'          => array( esc_html__( 'Number', 'kirki' ), '' ),
-	'palette'         => array( esc_html__( 'Palette', 'kirki' ), '' ),
-	'preset'          => array( esc_html__( 'Preset', 'kirki' ), '' ),
-	'radio'           => array( esc_html__( 'Radio', 'kirki' ), esc_html__( 'A plain Radio control.', 'kirki' ) ),
-	'radio-buttonset' => array( esc_html__( 'Radio Buttonset', 'kirki' ), esc_html__( 'Radio-Buttonset controls are essentially radio controls with some fancy styling to make them look cooler.', 'kirki' ) ),
-	'radio-image'     => array( esc_html__( 'Radio Image', 'kirki' ), esc_html__( 'Radio-Image controls are essentially radio controls with some fancy styles to use images', 'kirki' ) ),
-	'repeater'        => array( esc_html__( 'Repeater', 'kirki' ), '' ),
-	'select'          => array( esc_html__( 'Select', 'kirki' ), '' ),
-	'slider'          => array( esc_html__( 'Slider', 'kirki' ), '' ),
-	'sortable'        => array( esc_html__( 'Sortable', 'kirki' ), '' ),
-	'switch'          => array( esc_html__( 'Switch', 'kirki' ), '' ),
-	'toggle'          => array( esc_html__( 'Toggle', 'kirki' ), '' ),
-	'typography'      => array( esc_html__( 'Typography', 'kirki' ), '', 'outer' ),
+	'background'      => array( esc_html__( 'Background', 'wsubusiness' ), '' ),
+	'code'            => array( esc_html__( 'Code', 'wsubusiness' ), '' ),
+	'checkbox'        => array( esc_html__( 'Checkbox', 'wsubusiness' ), '' ),
+	'color'           => array( esc_html__( 'Color', 'wsubusiness' ), '' ),
+	'color-palette'   => array( esc_html__( 'Color Palette', 'wsubusiness' ), '' ),
+	'custom'          => array( esc_html__( 'Custom', 'wsubusiness' ), '' ),
+	'dashicons'       => array( esc_html__( 'Dashicons', 'wsubusiness' ), '' ),
+	'date'            => array( esc_html__( 'Date', 'wsubusiness' ), '' ),
+	'dimension'       => array( esc_html__( 'Dimension', 'wsubusiness' ), '' ),
+	'dimensions'      => array( esc_html__( 'Dimensions', 'wsubusiness' ), '' ),
+	'dropdown-pages'  => array( esc_html__( 'Dropdown Pages', 'wsubusiness' ), '' ),
+	'editor'          => array( esc_html__( 'Editor', 'wsubusiness' ), '' ),
+	'fontawesome'     => array( esc_html__( 'Font-Awesome', 'wsubusiness' ), '' ),
+	'generic'         => array( esc_html__( 'Generic', 'wsubusiness' ), '' ),
+	'image'           => array( esc_html__( 'Image', 'wsubusiness' ), '' ),
+	'multicheck'      => array( esc_html__( 'Multicheck', 'wsubusiness' ), '' ),
+	'multicolor'      => array( esc_html__( 'Multicolor', 'wsubusiness' ), '' ),
+	'number'          => array( esc_html__( 'Number', 'wsubusiness' ), '' ),
+	'palette'         => array( esc_html__( 'Palette', 'wsubusiness' ), '' ),
+	'preset'          => array( esc_html__( 'Preset', 'wsubusiness' ), '' ),
+	'radio'           => array( esc_html__( 'Radio', 'wsubusiness' ), esc_html__( 'A plain Radio control.', 'wsubusiness' ) ),
+	'radio-buttonset' => array( esc_html__( 'Radio Buttonset', 'wsubusiness' ), esc_html__( 'Radio-Buttonset controls are essentially radio controls with some fancy styling to make them look cooler.', 'wsubusiness' ) ),
+	'radio-image'     => array( esc_html__( 'Radio Image', 'wsubusiness' ), esc_html__( 'Radio-Image controls are essentially radio controls with some fancy styles to use images', 'wsubusiness' ) ),
+	'repeater'        => array( esc_html__( 'Repeater', 'wsubusiness' ), '' ),
+	'select'          => array( esc_html__( 'Select', 'wsubusiness' ), '' ),
+	'slider'          => array( esc_html__( 'Slider', 'wsubusiness' ), '' ),
+	'sortable'        => array( esc_html__( 'Sortable', 'wsubusiness' ), '' ),
+	'switch'          => array( esc_html__( 'Switch', 'wsubusiness' ), '' ),
+	'toggle'          => array( esc_html__( 'Toggle', 'wsubusiness' ), '' ),
+	'typography'      => array( esc_html__( 'Typography', 'wsubusiness' ), '', 'outer' ),
 );
 foreach ( $sections as $section_id => $section ) {
 	$section_args = array(
@@ -102,9 +102,9 @@ foreach ( $sections as $section_id => $section ) {
 Kirki::add_section(
 	'pro_test',
 	array(
-		'title'       => esc_html__( 'Test Link Section', 'kirki' ),
+		'title'       => esc_html__( 'Test Link Section', 'wsubusiness' ),
 		'type'        => 'link',
-		'button_text' => esc_html__( 'Pro', 'kirki' ),
+		'button_text' => esc_html__( 'Pro', 'wsubusiness' ),
 		'button_url'  => 'https://wplemon.com',
 	)
 );
@@ -127,8 +127,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'background',
 		'settings'    => 'background_setting',
-		'label'       => esc_html__( 'Background Control', 'kirki' ),
-		'description' => esc_html__( 'Background conrols are pretty complex! (but useful if properly used)', 'kirki' ),
+		'label'       => esc_html__( 'Background Control', 'wsubusiness' ),
+		'description' => esc_html__( 'Background conrols are pretty complex! (but useful if properly used)', 'wsubusiness' ),
 		'section'     => 'background_section',
 		'default'     => array(
 			'background-color'      => 'rgba(20,20,20,.8)',
@@ -150,8 +150,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'code',
 		'settings'    => 'code_setting',
-		'label'       => esc_html__( 'Code Control', 'kirki' ),
-		'description' => esc_html__( 'Description', 'kirki' ),
+		'label'       => esc_html__( 'Code Control', 'wsubusiness' ),
+		'description' => esc_html__( 'Description', 'wsubusiness' ),
 		'section'     => 'code_section',
 		'default'     => '',
 		'choices'     => array(
@@ -169,8 +169,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'checkbox',
 		'settings'    => 'checkbox_setting',
-		'label'       => esc_html__( 'Checkbox Control', 'kirki' ),
-		'description' => esc_html__( 'Description', 'kirki' ),
+		'label'       => esc_html__( 'Checkbox Control', 'wsubusiness' ),
+		'description' => esc_html__( 'Description', 'wsubusiness' ),
 		'section'     => 'checkbox_section',
 		'default'     => true,
 	)
@@ -185,8 +185,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'color',
 		'settings'    => 'color_setting_hex',
-		'label'       => __( 'Color Control (hex-only)', 'kirki' ),
-		'description' => esc_html__( 'This is a color control - without alpha channel.', 'kirki' ),
+		'label'       => __( 'Color Control (hex-only)', 'wsubusiness' ),
+		'description' => esc_html__( 'This is a color control - without alpha channel.', 'wsubusiness' ),
 		'section'     => 'color_section',
 		'default'     => '#0008DC',
 	)
@@ -196,8 +196,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'color',
 		'settings'    => 'color_setting_rgba',
-		'label'       => __( 'Color Control (with alpha channel)', 'kirki' ),
-		'description' => esc_html__( 'This is a color control - with alpha channel.', 'kirki' ),
+		'label'       => __( 'Color Control (with alpha channel)', 'wsubusiness' ),
+		'description' => esc_html__( 'This is a color control - with alpha channel.', 'wsubusiness' ),
 		'section'     => 'color_section',
 		'default'     => '#0088CC',
 		'choices'     => array(
@@ -210,8 +210,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'color',
 		'settings'    => 'color_setting_hue',
-		'label'       => __( 'Color Control - hue only.', 'kirki' ),
-		'description' => esc_html__( 'This is a color control - hue only.', 'kirki' ),
+		'label'       => __( 'Color Control - hue only.', 'wsubusiness' ),
+		'description' => esc_html__( 'This is a color control - hue only.', 'wsubusiness' ),
 		'section'     => 'color_section',
 		'default'     => 160,
 		'mode'        => 'hue',
@@ -225,8 +225,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'date',
 		'settings'    => 'date_setting',
-		'label'       => esc_html__( 'Date Control', 'kirki' ),
-		'description' => esc_html__( 'This is a date control.', 'kirki' ),
+		'label'       => esc_html__( 'Date Control', 'wsubusiness' ),
+		'description' => esc_html__( 'This is a date control.', 'wsubusiness' ),
 		'section'     => 'date_section',
 		'default'     => '',
 	)
@@ -239,8 +239,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'editor',
 		'settings'    => 'editor_1',
-		'label'       => esc_html__( 'First Editor Control', 'kirki' ),
-		'description' => esc_html__( 'This is an editor control.', 'kirki' ),
+		'label'       => esc_html__( 'First Editor Control', 'wsubusiness' ),
+		'description' => esc_html__( 'This is an editor control.', 'wsubusiness' ),
 		'section'     => 'editor_section',
 		'default'     => '',
 	)
@@ -250,10 +250,10 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'editor',
 		'settings'    => 'editor_2',
-		'label'       => esc_html__( 'Second Editor Control', 'kirki' ),
-		'description' => esc_html__( 'This is a 2nd editor control just to check that we do not have issues with multiple instances.', 'kirki' ),
+		'label'       => esc_html__( 'Second Editor Control', 'wsubusiness' ),
+		'description' => esc_html__( 'This is a 2nd editor control just to check that we do not have issues with multiple instances.', 'wsubusiness' ),
 		'section'     => 'editor_section',
-		'default'     => esc_html__( 'Default Text', 'kirki' ),
+		'default'     => esc_html__( 'Default Text', 'wsubusiness' ),
 	)
 );
 
@@ -266,8 +266,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'color-palette',
 		'settings'    => 'color_palette_setting_0',
-		'label'       => esc_html__( 'Color-Palette', 'kirki' ),
-		'description' => esc_html__( 'This is a color-palette control', 'kirki' ),
+		'label'       => esc_html__( 'Color-Palette', 'wsubusiness' ),
+		'description' => esc_html__( 'This is a color-palette control', 'wsubusiness' ),
 		'section'     => 'color_palette_section',
 		'default'     => '#888888',
 		'choices'     => array(
@@ -281,8 +281,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'color-palette',
 		'settings'    => 'color_palette_setting_4',
-		'label'       => esc_html__( 'Color-Palette', 'kirki' ),
-		'description' => esc_html__( 'Material Design Colors - all', 'kirki' ),
+		'label'       => esc_html__( 'Color-Palette', 'wsubusiness' ),
+		'description' => esc_html__( 'Material Design Colors - all', 'wsubusiness' ),
 		'section'     => 'color_palette_section',
 		'default'     => '#F44336',
 		'choices'     => array(
@@ -296,8 +296,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'color-palette',
 		'settings'    => 'color_palette_setting_1',
-		'label'       => esc_html__( 'Color-Palette', 'kirki' ),
-		'description' => esc_html__( 'Material Design Colors - primary', 'kirki' ),
+		'label'       => esc_html__( 'Color-Palette', 'wsubusiness' ),
+		'description' => esc_html__( 'Material Design Colors - primary', 'wsubusiness' ),
 		'section'     => 'color_palette_section',
 		'default'     => '#000000',
 		'choices'     => array(
@@ -311,8 +311,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'color-palette',
 		'settings'    => 'color_palette_setting_2',
-		'label'       => esc_html__( 'Color-Palette', 'kirki' ),
-		'description' => esc_html__( 'Material Design Colors - red', 'kirki' ),
+		'label'       => esc_html__( 'Color-Palette', 'wsubusiness' ),
+		'description' => esc_html__( 'Material Design Colors - red', 'wsubusiness' ),
 		'section'     => 'color_palette_section',
 		'default'     => '#FF1744',
 		'choices'     => array(
@@ -326,8 +326,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'color-palette',
 		'settings'    => 'color_palette_setting_3',
-		'label'       => esc_html__( 'Color-Palette', 'kirki' ),
-		'description' => esc_html__( 'Material Design Colors - A100', 'kirki' ),
+		'label'       => esc_html__( 'Color-Palette', 'wsubusiness' ),
+		'description' => esc_html__( 'Material Design Colors - A100', 'wsubusiness' ),
 		'section'     => 'color_palette_section',
 		'default'     => '#FF80AB',
 		'choices'     => array(
@@ -347,8 +347,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'dashicons',
 		'settings'    => 'dashicons_setting_0',
-		'label'       => esc_html__( 'Dashicons Control', 'kirki' ),
-		'description' => esc_html__( 'Using a custom array of dashicons', 'kirki' ),
+		'label'       => esc_html__( 'Dashicons Control', 'wsubusiness' ),
+		'description' => esc_html__( 'Using a custom array of dashicons', 'wsubusiness' ),
 		'section'     => 'dashicons_section',
 		'default'     => 'menu',
 		'choices'     => array(
@@ -367,8 +367,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'dashicons',
 		'settings'    => 'dashicons_setting_1',
-		'label'       => esc_html__( 'All Dashicons', 'kirki' ),
-		'description' => esc_html__( 'Showing all dashicons', 'kirki' ),
+		'label'       => esc_html__( 'All Dashicons', 'wsubusiness' ),
+		'description' => esc_html__( 'Showing all dashicons', 'wsubusiness' ),
 		'section'     => 'dashicons_section',
 		'default'     => 'menu',
 	)
@@ -381,8 +381,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'dimension',
 		'settings'    => 'dimension_0',
-		'label'       => esc_html__( 'Dimension Control', 'kirki' ),
-		'description' => esc_html__( 'Description Here.', 'kirki' ),
+		'label'       => esc_html__( 'Dimension Control', 'wsubusiness' ),
+		'description' => esc_html__( 'Description Here.', 'wsubusiness' ),
 		'section'     => 'dimension_section',
 		'default'     => '10px',
 		'choices'     => array(
@@ -398,8 +398,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'dimensions',
 		'settings'    => 'dimensions_0',
-		'label'       => esc_html__( 'Dimension Control', 'kirki' ),
-		'description' => esc_html__( 'Description Here.', 'kirki' ),
+		'label'       => esc_html__( 'Dimension Control', 'wsubusiness' ),
+		'description' => esc_html__( 'Description Here.', 'wsubusiness' ),
 		'section'     => 'dimensions_section',
 		'default'     => array(
 			'width'  => '100px',
@@ -412,8 +412,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'dimensions',
 		'settings'    => 'dimensions_1',
-		'label'       => esc_html__( 'Dimension Control', 'kirki' ),
-		'description' => esc_html__( 'Description Here.', 'kirki' ),
+		'label'       => esc_html__( 'Dimension Control', 'wsubusiness' ),
+		'description' => esc_html__( 'Description Here.', 'wsubusiness' ),
 		'section'     => 'dimensions_section',
 		'default'     => array(
 			'padding-top'    => '1em',
@@ -428,8 +428,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'spacing',
 		'settings'    => 'spacing_0',
-		'label'       => esc_html__( 'Spacing Control', 'kirki' ),
-		'description' => esc_html__( 'Description Here.', 'kirki' ),
+		'label'       => esc_html__( 'Spacing Control', 'wsubusiness' ),
+		'description' => esc_html__( 'Description Here.', 'wsubusiness' ),
 		'section'     => 'dimensions_section',
 		'default'     => array(
 			'top'    => '1em',
@@ -447,8 +447,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'dropdown-pages',
 		'settings'    => 'dropdown-pages',
-		'label'       => esc_html__( 'Dimension Control', 'kirki' ),
-		'description' => esc_html__( 'Description Here.', 'kirki' ),
+		'label'       => esc_html__( 'Dimension Control', 'wsubusiness' ),
+		'description' => esc_html__( 'Description Here.', 'wsubusiness' ),
 		'section'     => 'dropdown_pages_section',
 		'default'     => array(
 			'width'  => '100px',
@@ -465,8 +465,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'fontawesome',
 		'settings'    => 'fontawesome_setting',
-		'label'       => esc_html__( 'Font Awesome Control', 'kirki' ),
-		'description' => esc_html__( 'Description Here.', 'kirki' ),
+		'label'       => esc_html__( 'Font Awesome Control', 'wsubusiness' ),
+		'description' => esc_html__( 'Description Here.', 'wsubusiness' ),
 		'section'     => 'fontawesome_section',
 		'default'     => 'bath',
 	)
@@ -479,8 +479,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'text',
 		'settings'    => 'generic_text_setting',
-		'label'       => esc_html__( 'Text Control', 'kirki' ),
-		'description' => esc_html__( 'Description', 'kirki' ),
+		'label'       => esc_html__( 'Text Control', 'wsubusiness' ),
+		'description' => esc_html__( 'Description', 'wsubusiness' ),
 		'section'     => 'generic_section',
 		'default'     => '',
 	)
@@ -490,8 +490,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'textarea',
 		'settings'    => 'generic_textarea_setting',
-		'label'       => esc_html__( 'Textarea Control', 'kirki' ),
-		'description' => esc_html__( 'Description', 'kirki' ),
+		'label'       => esc_html__( 'Textarea Control', 'wsubusiness' ),
+		'description' => esc_html__( 'Description', 'wsubusiness' ),
 		'section'     => 'generic_section',
 		'default'     => '',
 	)
@@ -501,8 +501,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'generic',
 		'settings'    => 'generic_custom_setting',
-		'label'       => esc_html__( 'Custom input Control.', 'kirki' ),
-		'description' => esc_html__( 'The "generic" control allows you to add any input type you want. In this case we use type="password" and define custom styles.', 'kirki' ),
+		'label'       => esc_html__( 'Custom input Control.', 'wsubusiness' ),
+		'description' => esc_html__( 'The "generic" control allows you to add any input type you want. In this case we use type="password" and define custom styles.', 'wsubusiness' ),
 		'section'     => 'generic_section',
 		'default'     => '',
 		'choices'     => array(
@@ -521,8 +521,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'image',
 		'settings'    => 'image_setting_url',
-		'label'       => esc_html__( 'Image Control (URL)', 'kirki' ),
-		'description' => esc_html__( 'Description Here.', 'kirki' ),
+		'label'       => esc_html__( 'Image Control (URL)', 'wsubusiness' ),
+		'description' => esc_html__( 'Description Here.', 'wsubusiness' ),
 		'section'     => 'image_section',
 		'default'     => '',
 	)
@@ -532,8 +532,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'image',
 		'settings'    => 'image_setting_id',
-		'label'       => esc_html__( 'Image Control (ID)', 'kirki' ),
-		'description' => esc_html__( 'Description Here.', 'kirki' ),
+		'label'       => esc_html__( 'Image Control (ID)', 'wsubusiness' ),
+		'description' => esc_html__( 'Description Here.', 'wsubusiness' ),
 		'section'     => 'image_section',
 		'default'     => '',
 		'choices'     => array(
@@ -546,8 +546,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'image',
 		'settings'    => 'image_setting_array',
-		'label'       => esc_html__( 'Image Control (array)', 'kirki' ),
-		'description' => esc_html__( 'Description Here.', 'kirki' ),
+		'label'       => esc_html__( 'Image Control (array)', 'wsubusiness' ),
+		'description' => esc_html__( 'Description Here.', 'wsubusiness' ),
 		'section'     => 'image_section',
 		'default'     => '',
 		'choices'     => array(
@@ -563,16 +563,16 @@ my_config_kirki_add_field(
 	array(
 		'type'     => 'multicheck',
 		'settings' => 'multicheck_setting',
-		'label'    => esc_html__( 'Multickeck Control', 'kirki' ),
+		'label'    => esc_html__( 'Multickeck Control', 'wsubusiness' ),
 		'section'  => 'multicheck_section',
 		'default'  => array( 'option-1', 'option-3', 'option-4' ),
 		'priority' => 10,
 		'choices'  => array(
-			'option-1' => esc_html__( 'Option 1', 'kirki' ),
-			'option-2' => esc_html__( 'Option 2', 'kirki' ),
-			'option-3' => esc_html__( 'Option 3', 'kirki' ),
-			'option-4' => esc_html__( 'Option 4', 'kirki' ),
-			'option-5' => esc_html__( 'Option 5', 'kirki' ),
+			'option-1' => esc_html__( 'Option 1', 'wsubusiness' ),
+			'option-2' => esc_html__( 'Option 2', 'wsubusiness' ),
+			'option-3' => esc_html__( 'Option 3', 'wsubusiness' ),
+			'option-4' => esc_html__( 'Option 4', 'wsubusiness' ),
+			'option-5' => esc_html__( 'Option 5', 'wsubusiness' ),
 		),
 	)
 );
@@ -584,13 +584,13 @@ my_config_kirki_add_field(
 	array(
 		'type'     => 'multicolor',
 		'settings' => 'multicolor_setting',
-		'label'    => esc_html__( 'Label', 'kirki' ),
+		'label'    => esc_html__( 'Label', 'wsubusiness' ),
 		'section'  => 'multicolor_section',
 		'priority' => 10,
 		'choices'  => array(
-			'link'   => esc_html__( 'Color', 'kirki' ),
-			'hover'  => esc_html__( 'Hover', 'kirki' ),
-			'active' => esc_html__( 'Active', 'kirki' ),
+			'link'   => esc_html__( 'Color', 'wsubusiness' ),
+			'hover'  => esc_html__( 'Hover', 'wsubusiness' ),
+			'active' => esc_html__( 'Active', 'wsubusiness' ),
 		),
 		'alpha'    => true,
 		'default'  => array(
@@ -608,7 +608,7 @@ my_config_kirki_add_field(
 	array(
 		'type'     => 'number',
 		'settings' => 'number_setting',
-		'label'    => esc_html__( 'Label', 'kirki' ),
+		'label'    => esc_html__( 'Label', 'wsubusiness' ),
 		'section'  => 'number_section',
 		'priority' => 10,
 		'choices'  => array(
@@ -626,7 +626,7 @@ my_config_kirki_add_field(
 	array(
 		'type'     => 'palette',
 		'settings' => 'palette_setting',
-		'label'    => esc_html__( 'Label', 'kirki' ),
+		'label'    => esc_html__( 'Label', 'wsubusiness' ),
 		'section'  => 'palette_section',
 		'default'  => 'blue',
 		'choices'  => array(
@@ -645,16 +645,16 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'radio',
 		'settings'    => 'radio_setting',
-		'label'       => esc_html__( 'Radio Control', 'kirki' ),
-		'description' => esc_html__( 'The description here.', 'kirki' ),
+		'label'       => esc_html__( 'Radio Control', 'wsubusiness' ),
+		'description' => esc_html__( 'The description here.', 'wsubusiness' ),
 		'section'     => 'radio_section',
 		'default'     => 'option-3',
 		'choices'     => array(
-			'option-1' => esc_html__( 'Option 1', 'kirki' ),
-			'option-2' => esc_html__( 'Option 2', 'kirki' ),
-			'option-3' => esc_html__( 'Option 3', 'kirki' ),
-			'option-4' => esc_html__( 'Option 4', 'kirki' ),
-			'option-5' => esc_html__( 'Option 5', 'kirki' ),
+			'option-1' => esc_html__( 'Option 1', 'wsubusiness' ),
+			'option-2' => esc_html__( 'Option 2', 'wsubusiness' ),
+			'option-3' => esc_html__( 'Option 3', 'wsubusiness' ),
+			'option-4' => esc_html__( 'Option 4', 'wsubusiness' ),
+			'option-5' => esc_html__( 'Option 5', 'wsubusiness' ),
 		),
 	)
 );
@@ -666,14 +666,14 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'radio-buttonset',
 		'settings'    => 'radio_buttonset_setting',
-		'label'       => esc_html__( 'Radio-Buttonset Control', 'kirki' ),
-		'description' => esc_html__( 'The description here.', 'kirki' ),
+		'label'       => esc_html__( 'Radio-Buttonset Control', 'wsubusiness' ),
+		'description' => esc_html__( 'The description here.', 'wsubusiness' ),
 		'section'     => 'radio_buttonset_section',
 		'default'     => 'option-2',
 		'choices'     => array(
-			'option-1' => esc_html__( 'Option 1', 'kirki' ),
-			'option-2' => esc_html__( 'Option 2', 'kirki' ),
-			'option-3' => esc_html__( 'Option 3', 'kirki' ),
+			'option-1' => esc_html__( 'Option 1', 'wsubusiness' ),
+			'option-2' => esc_html__( 'Option 2', 'wsubusiness' ),
+			'option-3' => esc_html__( 'Option 3', 'wsubusiness' ),
 		),
 	)
 );
@@ -685,8 +685,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'radio-image',
 		'settings'    => 'radio_image_setting',
-		'label'       => esc_html__( 'Radio-Image Control', 'kirki' ),
-		'description' => esc_html__( 'The description here.', 'kirki' ),
+		'label'       => esc_html__( 'Radio-Image Control', 'wsubusiness' ),
+		'description' => esc_html__( 'The description here.', 'wsubusiness' ),
 		'section'     => 'radio_image_section',
 		'default'     => 'travel',
 		'choices'     => array(
@@ -704,18 +704,18 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'repeater',
 		'settings'    => 'repeater_setting',
-		'label'       => esc_html__( 'Repeater Control', 'kirki' ),
-		'description' => esc_html__( 'The description here.', 'kirki' ),
+		'label'       => esc_html__( 'Repeater Control', 'wsubusiness' ),
+		'description' => esc_html__( 'The description here.', 'wsubusiness' ),
 		'section'     => 'repeater_section',
 		'default'     => array(
 			array(
-				'link_text'   => esc_html__( 'Kirki Site', 'kirki' ),
+				'link_text'   => esc_html__( 'Kirki Site', 'wsubusiness' ),
 				'link_url'    => 'https://kirki.org/',
 				'link_target' => '_self',
 				'checkbox'    => false,
 			),
 			array(
-				'link_text'   => esc_html__( 'Kirki Repository', 'kirki' ),
+				'link_text'   => esc_html__( 'Kirki Repository', 'wsubusiness' ),
 				'link_url'    => 'https://github.com/aristath/kirki',
 				'link_target' => '_self',
 				'checkbox'    => false,
@@ -724,29 +724,29 @@ my_config_kirki_add_field(
 		'fields'      => array(
 			'link_text'   => array(
 				'type'        => 'text',
-				'label'       => esc_html__( 'Link Text', 'kirki' ),
-				'description' => esc_html__( 'This will be the label for your link', 'kirki' ),
+				'label'       => esc_html__( 'Link Text', 'wsubusiness' ),
+				'description' => esc_html__( 'This will be the label for your link', 'wsubusiness' ),
 				'default'     => '',
 			),
 			'link_url'    => array(
 				'type'        => 'text',
-				'label'       => esc_html__( 'Link URL', 'kirki' ),
-				'description' => esc_html__( 'This will be the link URL', 'kirki' ),
+				'label'       => esc_html__( 'Link URL', 'wsubusiness' ),
+				'description' => esc_html__( 'This will be the link URL', 'wsubusiness' ),
 				'default'     => '',
 			),
 			'link_target' => array(
 				'type'        => 'select',
-				'label'       => esc_html__( 'Link Target', 'kirki' ),
-				'description' => esc_html__( 'This will be the link target', 'kirki' ),
+				'label'       => esc_html__( 'Link Target', 'wsubusiness' ),
+				'description' => esc_html__( 'This will be the link target', 'wsubusiness' ),
 				'default'     => '_self',
 				'choices'     => array(
-					'_blank' => esc_html__( 'New Window', 'kirki' ),
-					'_self'  => esc_html__( 'Same Frame', 'kirki' ),
+					'_blank' => esc_html__( 'New Window', 'wsubusiness' ),
+					'_self'  => esc_html__( 'Same Frame', 'wsubusiness' ),
 				),
 			),
 			'checkbox'    => array(
 				'type'    => 'checkbox',
-				'label'   => esc_html__( 'Checkbox', 'kirki' ),
+				'label'   => esc_html__( 'Checkbox', 'wsubusiness' ),
 				'default' => false,
 			),
 		),
@@ -760,17 +760,17 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'select',
 		'settings'    => 'select_setting',
-		'label'       => esc_html__( 'Select Control', 'kirki' ),
-		'description' => esc_html__( 'The description here.', 'kirki' ),
+		'label'       => esc_html__( 'Select Control', 'wsubusiness' ),
+		'description' => esc_html__( 'The description here.', 'wsubusiness' ),
 		'section'     => 'select_section',
 		'default'     => 'option-3',
-		'placeholder' => esc_html__( 'Select an option', 'kirki' ),
+		'placeholder' => esc_html__( 'Select an option', 'wsubusiness' ),
 		'choices'     => array(
-			'option-1' => esc_html__( 'Option 1', 'kirki' ),
-			'option-2' => esc_html__( 'Option 2', 'kirki' ),
-			'option-3' => esc_html__( 'Option 3', 'kirki' ),
-			'option-4' => esc_html__( 'Option 4', 'kirki' ),
-			'option-5' => esc_html__( 'Option 5', 'kirki' ),
+			'option-1' => esc_html__( 'Option 1', 'wsubusiness' ),
+			'option-2' => esc_html__( 'Option 2', 'wsubusiness' ),
+			'option-3' => esc_html__( 'Option 3', 'wsubusiness' ),
+			'option-4' => esc_html__( 'Option 4', 'wsubusiness' ),
+			'option-5' => esc_html__( 'Option 5', 'wsubusiness' ),
 		),
 	)
 );
@@ -779,17 +779,17 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'select',
 		'settings'    => 'select_setting_multiple',
-		'label'       => esc_html__( 'Select Control', 'kirki' ),
-		'description' => esc_html__( 'The description here.', 'kirki' ),
+		'label'       => esc_html__( 'Select Control', 'wsubusiness' ),
+		'description' => esc_html__( 'The description here.', 'wsubusiness' ),
 		'section'     => 'select_section',
 		'default'     => 'option-3',
 		'multiple'    => 3,
 		'choices'     => array(
-			'option-1' => esc_html__( 'Option 1', 'kirki' ),
-			'option-2' => esc_html__( 'Option 2', 'kirki' ),
-			'option-3' => esc_html__( 'Option 3', 'kirki' ),
-			'option-4' => esc_html__( 'Option 4', 'kirki' ),
-			'option-5' => esc_html__( 'Option 5', 'kirki' ),
+			'option-1' => esc_html__( 'Option 1', 'wsubusiness' ),
+			'option-2' => esc_html__( 'Option 2', 'wsubusiness' ),
+			'option-3' => esc_html__( 'Option 3', 'wsubusiness' ),
+			'option-4' => esc_html__( 'Option 4', 'wsubusiness' ),
+			'option-5' => esc_html__( 'Option 5', 'wsubusiness' ),
 		),
 	)
 );
@@ -801,8 +801,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'slider',
 		'settings'    => 'slider_setting',
-		'label'       => esc_html__( 'Slider Control', 'kirki' ),
-		'description' => esc_html__( 'The description here.', 'kirki' ),
+		'label'       => esc_html__( 'Slider Control', 'wsubusiness' ),
+		'description' => esc_html__( 'The description here.', 'wsubusiness' ),
 		'section'     => 'slider_section',
 		'default'     => '10',
 		'choices'     => array(
@@ -821,16 +821,16 @@ my_config_kirki_add_field(
 	array(
 		'type'     => 'sortable',
 		'settings' => 'sortable_setting',
-		'label'    => __( 'This is a sortable control.', 'kirki' ),
+		'label'    => __( 'This is a sortable control.', 'wsubusiness' ),
 		'section'  => 'sortable_section',
 		'default'  => array( 'option3', 'option1', 'option4' ),
 		'choices'  => array(
-			'option1' => esc_html__( 'Option 1', 'kirki' ),
-			'option2' => esc_html__( 'Option 2', 'kirki' ),
-			'option3' => esc_html__( 'Option 3', 'kirki' ),
-			'option4' => esc_html__( 'Option 4', 'kirki' ),
-			'option5' => esc_html__( 'Option 5', 'kirki' ),
-			'option6' => esc_html__( 'Option 6', 'kirki' ),
+			'option1' => esc_html__( 'Option 1', 'wsubusiness' ),
+			'option2' => esc_html__( 'Option 2', 'wsubusiness' ),
+			'option3' => esc_html__( 'Option 3', 'wsubusiness' ),
+			'option4' => esc_html__( 'Option 4', 'wsubusiness' ),
+			'option5' => esc_html__( 'Option 5', 'wsubusiness' ),
+			'option6' => esc_html__( 'Option 6', 'wsubusiness' ),
 		),
 	)
 );
@@ -842,8 +842,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'switch',
 		'settings'    => 'switch_setting',
-		'label'       => esc_html__( 'Switch Control', 'kirki' ),
-		'description' => esc_html__( 'Description', 'kirki' ),
+		'label'       => esc_html__( 'Switch Control', 'wsubusiness' ),
+		'description' => esc_html__( 'Description', 'wsubusiness' ),
 		'section'     => 'switch_section',
 		'default'     => true,
 	)
@@ -853,13 +853,13 @@ my_config_kirki_add_field(
 	array(
 		'type'            => 'switch',
 		'settings'        => 'switch_setting_custom_label',
-		'label'           => esc_html__( 'Switch Control with custom labels', 'kirki' ),
-		'description'     => esc_html__( 'Description', 'kirki' ),
+		'label'           => esc_html__( 'Switch Control with custom labels', 'wsubusiness' ),
+		'description'     => esc_html__( 'Description', 'wsubusiness' ),
 		'section'         => 'switch_section',
 		'default'         => true,
 		'choices'         => array(
-			'on'  => esc_html__( 'Enabled', 'kirki' ),
-			'off' => esc_html__( 'Disabled', 'kirki' ),
+			'on'  => esc_html__( 'Enabled', 'wsubusiness' ),
+			'off' => esc_html__( 'Disabled', 'wsubusiness' ),
 		),
 		'active_callback' => array(
 			array(
@@ -878,8 +878,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'toggle',
 		'settings'    => 'toggle_setting',
-		'label'       => esc_html__( 'Toggle Control', 'kirki' ),
-		'description' => esc_html__( 'Description', 'kirki' ),
+		'label'       => esc_html__( 'Toggle Control', 'wsubusiness' ),
+		'description' => esc_html__( 'Description', 'wsubusiness' ),
 		'section'     => 'toggle_section',
 		'default'     => true,
 		// WIP.
@@ -903,8 +903,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'typography',
 		'settings'    => 'typography_setting_0',
-		'label'       => esc_html__( 'Typography Control Label', 'kirki' ),
-		'description' => esc_html__( 'The full set of options.', 'kirki' ),
+		'label'       => esc_html__( 'Typography Control Label', 'wsubusiness' ),
+		'description' => esc_html__( 'The full set of options.', 'wsubusiness' ),
 		'section'     => 'typography_section',
 		'priority'    => 10,
 		'transport'   => 'auto',
@@ -957,8 +957,8 @@ my_config_kirki_add_field(
 	array(
 		'type'        => 'typography',
 		'settings'    => 'typography_setting_1',
-		'label'       => esc_html__( 'Typography Control Label', 'kirki' ),
-		'description' => esc_html__( 'The full set of options.', 'kirki' ),
+		'label'       => esc_html__( 'Typography Control Label', 'wsubusiness' ),
+		'description' => esc_html__( 'The full set of options.', 'wsubusiness' ),
 		'section'     => 'typography_section',
 		'priority'    => 10,
 		'transport'   => 'auto',
@@ -995,8 +995,8 @@ function kirki_sidebars_select_example() {
 		array(
 			'type'        => 'select',
 			'settings'    => 'sidebars_select',
-			'label'       => esc_html__( 'Sidebars Select', 'kirki' ),
-			'description' => esc_html__( 'An example of how to implement sidebars selection.', 'kirki' ),
+			'label'       => esc_html__( 'Sidebars Select', 'wsubusiness' ),
+			'description' => esc_html__( 'An example of how to implement sidebars selection.', 'wsubusiness' ),
 			'section'     => 'select_section',
 			'default'     => 'primary',
 			'choices'     => $sidebars_choices,

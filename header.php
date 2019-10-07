@@ -38,6 +38,7 @@
 </head>
 
 <body <?php get_header_image() ? body_class('image-filters-enabled') : body_class(); ?>>
+<?php do_action( 'in_body_top' ); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wsubusiness' ); ?></a>
 
@@ -99,6 +100,7 @@
 								?>
 							</div><!-- .entry-meta -->
 						<?php endif; ?>
+						<?php do_action( 'in_entry_header_bottom' ); ?>
 					</div><!-- .entry-header -->
 				<?php endif; ?>
 			</div><!-- .site-featured-image -->
@@ -106,7 +108,11 @@
 		
 	</header><!-- #masthead -->
 
+	<?php do_action( 'below_header' ); ?>
+	
 	<?php get_sidebar('ctatop'); ?>
 
 	<div id="content" class="site-content">
+		<?php do_action( 'in_site_content_top' ); ?>
 		<div class="site-content-inner container clear <?php $sidebar_position = 'right' == get_theme_mod('layout_sidebar_position', 'right') ? 'sidebar-right' : 'sidebar-left'; echo esc_attr( $sidebar_position ); ?>">
+			<?php do_action( 'in_site_content_inner_top' ); ?>
