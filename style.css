@@ -3193,6 +3193,19 @@ ul.page-numbers li:last-child .page-numbers, ol.page-numbers li:last-child .page
   color: #000;
 }
 
+.lead {
+  font-size: 1rem;
+  margin: 1rem 0 0;
+  opacity: 0.6;
+  line-height: 1.3;
+}
+
+@media only screen and (min-width: 768px) {
+  .lead {
+    font-size: 1.5rem;
+  }
+}
+
 .entry-meta {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3300,6 +3313,20 @@ ul.page-numbers li:last-child .page-numbers, ol.page-numbers li:last-child .page
     margin-left: -4rem;
     margin-right: -4rem;
   }
+}
+
+.page-template-template-fullwidth .entry-header .entry-meta,
+.post-template-template-fullwidth .entry-header .entry-meta,
+.page-template-template-blank .entry-header .entry-meta,
+.post-template-template-blank .entry-header .entry-meta {
+  margin-top: 0.5rem;
+}
+
+.page-template-template-fullwidth .entry-header .lead,
+.post-template-template-fullwidth .entry-header .lead,
+.page-template-template-blank .entry-header .lead,
+.post-template-template-blank .entry-header .lead {
+  text-align: center;
 }
 
 .page-template-template-fullwidth .align-wrap-full,

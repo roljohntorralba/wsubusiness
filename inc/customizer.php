@@ -223,6 +223,7 @@ Kirki::add_field( 'wsubusiness_kirki', array(
 				'.main-navigation a:after',
 				'.main-navigation .main-menu > li.menu-item-has-children:after',
 				'.main-navigation li',
+				'.site-header .entry-header',
 				'.site-header .entry-meta',
 				'.site-header .entry-title',
 				'.main-navigation a',
