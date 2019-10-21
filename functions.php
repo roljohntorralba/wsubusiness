@@ -277,3 +277,15 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+/**
+ * Theme Update Checker
+ */
+require 'plugin-update-checker/plugin-update-checker.php';
+$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/rolzan/wsubusiness',
+	__FILE__,
+	'wsubusiness'
+);
+//Optional: Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('stable');
