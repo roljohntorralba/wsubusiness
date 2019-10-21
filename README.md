@@ -24,7 +24,7 @@ Installation
 Frequently Asked Questions
 ---------------
 
-### Does this theme support any plugins?
+**Does this theme support any plugins?**
 
 WebsiteSetup Business includes support for Infinite Scroll in Jetpack, Woocommerce when installed, and major Page Builder plugins.
 
