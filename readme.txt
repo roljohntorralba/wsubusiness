@@ -29,24 +29,25 @@ WebsiteSetup Business includes support for Infinite Scroll in Jetpack, Woocommer
 
 == Changelog ==
 
-= 1.0.1 - September 27 2019 =
-* Initial release
-
-= 2.0.0 - September 25 2019 =
-* Theme submission
-
-= 2.1.0 - October 1 2019 =
-* Added hooks for functional locations
-* Fixed customizer primary color bug
-
-= 2.1.1 - October 21 2019 =
+= 2.2.0 - October 21 2019 =
 * Improvements and bug fixes
 
 = 2.1.2 - October 21 2019 =
 * Improvements and bug fixes
 
-= 2.2.0 - October 21 2019 =
+= 2.1.1 - October 21 2019 =
 * Improvements and bug fixes
+
+= 2.1.0 - October 1 2019 =
+* Added hooks for functional locations
+* Fixed customizer primary color bug
+
+= 2.0.0 - September 25 2019 =
+* Theme submission
+
+= 1.0.1 - September 27 2019 =
+* Initial release
+
 
 == Credits ==
 
